@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -29,39 +29,45 @@ header {
     position: relative;
     overflow: hidden;
     background:
-        linear-gradient(
-            to bottom,
-            rgba(0,0,0,0.5) 0%, 
-            rgba(20,20,30,0.4) 40%, 
-            rgba(50,0,0,0.3) 100%
-        ),
         url('https://cdn.pixabay.com/photo/2023/07/13/07/57/ai-generated-people-silhouettes-8122948_1280.jpg')
         center/cover no-repeat;
     padding: 190px 20px;
     text-align: center;
-    animation: fadeIn 1.3s ease;
-    background-attachment: fixed; /* subtle parallax effect */
 }
 
-/* MIST / FOG LAYER */
-header::before {
-    content: '';
+/* LAYERED MIST */
+.mist-layer {
     position: absolute;
-    inset: 0;
-    background: linear-gradient(
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        0deg,
         rgba(255,255,255,0.03),
-        rgba(255,255,255,0.07) 50%,
-        rgba(255,255,255,0.03)
+        rgba(255,255,255,0.08) 20px
     );
-    opacity: 0.25;
+    opacity: 0.2;
+    animation: mistMove 60s linear infinite;
     pointer-events: none;
     z-index: 1;
-    animation: mistRise 25s linear infinite;
 }
 
-@keyframes mistRise {
-    0% { transform: translateY(100%); }
-    100% { transform: translateY(-50%); }
+.mist-layer:nth-child(2) {
+    animation-duration: 100s;
+    opacity: 0.15;
+    transform: translateX(50%);
+}
+
+.mist-layer:nth-child(3) {
+    animation-duration: 80s;
+    opacity: 0.1;
+    transform: translateX(-50%);
+}
+
+@keyframes mistMove {
+    0% { transform: translate(0%, 100%); }
+    100% { transform: translate(-25%, -50%); }
 }
 
 /* HERO TEXT ABOVE MIST */
@@ -230,6 +236,11 @@ footer {
 <body>
 
 <header>
+    <!-- Mist layers -->
+    <div class="mist-layer"></div>
+    <div class="mist-layer"></div>
+    <div class="mist-layer"></div>
+
     <h1>Returning Home</h1>
     <p>A Powerful Weekend Retreat for Jewish Men Ready to Break Open, Heal Deeply, and Step Into Their True Strength</p>
     <p>Breathwork • Shadow Work • Experiential Processes • Sacred Brotherhood</p>
@@ -313,3 +324,4 @@ footer {
 
 </body>
 </html>
+
