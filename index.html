@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -24,24 +24,42 @@ h1, h2, h3 {
     letter-spacing: 1px;
 }
 
-/* HERO SECTION */
+/* HERO SECTION – NEW ILLUSTRATION BACKGROUND */
 header {
+    position: relative;
+    overflow: hidden;
+
     background:
         linear-gradient(
             to bottom,
-            rgba(0, 0, 0, 0.92) 0%,
-            rgba(15, 15, 22, 0.88) 40%,
-            rgba(90, 20, 0, 0.80) 100%
+            rgba(0,0,0,0.95) 0%,
+            rgba(20,20,30,0.88) 40%,
+            rgba(50,0,0,0.85) 100%
         ),
-        url('https://www.transparenttextures.com/patterns/dark-denim.png'),
-        url('https://images.unsplash.com/photo-1602019646305-234b0f74ef24?q=80&w=2600&auto=format&fit=crop')
+        url('https://images.unsplash.com/photo-1600077106729-18f3d94e2b2a?blend=000000&sat=-100&exp=-10&blend-mode=overlay')
         center/cover no-repeat;
 
-    padding: 180px 20px;
+    padding: 190px 20px;
     text-align: center;
+    border-bottom: 3px solid rgba(249,115,22,0.45);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.55);
     animation: fadeIn 1.3s ease;
-    border-bottom: 3px solid rgba(249, 115, 22, 0.35);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* Cinematic glowing movement */
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 65%, rgba(255,100,0,0.25), transparent 60%);
+    opacity: 0.35;
+    animation: pulseGlow 8s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0% { opacity: 0.25; transform: scale(1); }
+    50% { opacity: 0.55; transform: scale(1.25); }
+    100% { opacity: 0.25; transform: scale(1); }
 }
 
 /* HERO TEXT */
@@ -79,7 +97,7 @@ header p {
 }
 .cta:hover {
     transform: translateY(-4px);
-    box-shadow: 0 20px 35px rgba(249, 115, 22, 0.6);
+    box-shadow: 0 20px 35px rgba(249,115,22,0.6);
 }
 
 /* NAVIGATION */
@@ -178,66 +196,6 @@ p {
     font-weight: 700;
 }
 
-/* ❄️ COLD PLUNGE SECTION WITH ANIMATED FOG + BREATH */
-.cold-section {
-    position: relative;
-    overflow: hidden;
-    padding: 140px 20px;
-    background:
-        linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(30,41,59,0.92)),
-        url('https://images.unsplash.com/photo-1610641818989-7482238cc5c1?q=80&w=2400&auto=format&fit=crop')
-        center/cover no-repeat;
-    border-top: 4px solid rgba(249,115,22,0.45);
-    border-bottom: 4px solid rgba(249,115,22,0.3);
-    box-shadow: inset 0 0 60px rgba(0,0,0,0.8);
-}
-
-/* ❄️ Fog Animation Layers */
-.fog {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background: url('https://i.imgur.com/8IuucQZ.png');
-    background-size: cover;
-    opacity: 0.18;
-    animation: fogMove 35s linear infinite;
-}
-.fog2 {
-    animation: fogMove2 55s linear infinite;
-    opacity: 0.12;
-}
-
-@keyframes fogMove {
-    from { transform: translateX(-20%) translateY(0); }
-    to { transform: translateX(20%) translateY(-10%); }
-}
-@keyframes fogMove2 {
-    from { transform: translateX(10%) translateY(5%); }
-    to { transform: translateX(-10%) translateY(-5%); }
-}
-
-/* ⚡ Breath Condensation */
-.breath {
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
-    width: 220px;
-    height: 220px;
-    transform: translateX(-50%);
-    background: radial-gradient(circle, rgba(255,255,255,0.25), transparent 60%);
-    opacity: 0;
-    animation: breathe 4.5s ease-in-out infinite;
-    filter: blur(25px);
-}
-
-@keyframes breathe {
-    0% { opacity: 0; transform: translateX(-50%) scale(0.6); }
-    40% { opacity: 0.45; transform: translateX(-50%) scale(1); }
-    100% { opacity: 0; transform: translateX(-50%) scale(0.6); }
-}
-
 /* FOOTER */
 footer {
     background: #0b1120;
@@ -255,7 +213,6 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* MOBILE */
 @media(max-width: 768px) {
     header h1 { font-size: 2.8em; }
     header p { font-size: 1.2em; }
@@ -275,7 +232,6 @@ footer {
 <nav>
     <a href="#about">About</a>
     <a href="#what">Experience</a>
-    <a href="#coldplunge">Cold Plunge</a>
     <a href="#why">Why This Weekend</a>
     <a href="#register">Register</a>
 </nav>
@@ -289,36 +245,33 @@ footer {
 <section id="what" style="background:#131c2f;">
     <h2>What You'll Experience</h2>
     <div class="features">
+
         <div class="feature">
             <h3>Deep Breathwork</h3>
             <p>Guided conscious breathing to release stored trauma and access higher states of awareness.</p>
         </div>
+
         <div class="feature">
             <h3>Shadow Work Processes</h3>
-            <p>Safe, powerful group and one-on-one exercises to meet, own, and integrate the parts you've disowned.</p>
+            <p>Powerful emotional release work to face, own, and transform the parts you've avoided.</p>
         </div>
+
         <div class="feature">
             <h3>Experiential Activities</h3>
-            <p>Blindfold work, carpet work, movement, voice release, and sacred circle sharing in a supportive container.</p>
+            <p>Movement, voice release, blindfold work, carpet processes, and deep circle sharing.</p>
         </div>
+
+        <div class="feature">
+            <h3>Cold Plunge Immersion</h3>
+            <p>Ice-bath exposure to train resilience, nervous system strength, and emotional mastery under pressure.</p>
+        </div>
+
         <div class="feature">
             <h3>Torah & Brotherhood</h3>
-            <p>Shabbat together, niggunim, real talk, zero judgment — reconnecting to yourself, to Hashem, and to other men.</p>
+            <p>Shabbat together, niggunim, real talk, zero judgment — reconnecting to yourself, Hashem, and to other men.</p>
         </div>
+
     </div>
-</section>
-
-<!-- ❄️ CINEMATIC COLD PLUNGE SECTION -->
-<section id="coldplunge" class="cold-section">
-    <div class="fog"></div>
-    <div class="fog fog2"></div>
-    <div class="breath"></div>
-
-    <h2 style="text-shadow: 0 6px 20px rgba(0,0,0,0.8);">Cold Plunge Immersion</h2>
-    <p style="max-width: 850px; margin: auto; font-size: 1.3em; line-height: 1.8; text-shadow: 0 4px 12px rgba(0,0,0,0.7);">
-        Step into the ice. Slow your breath. Meet the part of you that rises under pressure.
-        Our guided cold plunge experience trains resilience, deep nervous system regulation, and the ability to stay calm and powerful in the face of discomfort.
-    </p>
 </section>
 
 <section id="why">
