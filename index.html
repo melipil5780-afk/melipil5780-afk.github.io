@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -24,42 +24,49 @@ h1, h2, h3 {
     letter-spacing: 1px;
 }
 
-/* HERO SECTION – AI-GENERATED ILLUSTRATION BACKGROUND */
+/* HERO SECTION – AI-GENERATED ILLUSTRATION + ANIMATED MIST */
 header {
     position: relative;
     overflow: hidden;
-
     background:
         linear-gradient(
             to bottom,
-            rgba(0,0,0,0.95) 0%,
-            rgba(20,20,30,0.88) 40%,
-            rgba(50,0,0,0.85) 100%
+            rgba(0,0,0,0.5) 0%,   /* slightly transparent for silhouettes */
+            rgba(20,20,30,0.4) 40%,
+            rgba(50,0,0,0.3) 100%
         ),
         url('https://cdn.pixabay.com/photo/2023/07/13/07/57/ai-generated-people-silhouettes-8122948_1280.jpg')
         center/cover no-repeat;
-
     padding: 190px 20px;
     text-align: center;
-    border-bottom: 3px solid rgba(249,115,22,0.45);
-    box-shadow: 0 20px 45px rgba(0,0,0,0.55);
     animation: fadeIn 1.3s ease;
+    background-attachment: fixed; /* subtle parallax */
 }
 
-/* Cinematic glowing movement */
-header::after {
-    content: "";
+/* MIST / FOG LAYER */
+header::before {
+    content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 50% 65%, rgba(255,100,0,0.25), transparent 60%);
-    opacity: 0.35;
-    animation: pulseGlow 8s ease-in-out infinite;
+    background: url('https://i.imgur.com/6ZyXykP.png'); /* semi-transparent fog texture */
+    background-size: cover;
+    opacity: 0.25;
+    animation: mistRise 25s linear infinite;
+    pointer-events: none;
+    z-index: 1;
 }
 
-@keyframes pulseGlow {
-    0% { opacity: 0.25; transform: scale(1); }
-    50% { opacity: 0.55; transform: scale(1.25); }
-    100% { opacity: 0.25; transform: scale(1); }
+/* HERO TEXT ABOVE MIST */
+header h1, header p, header a {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 5px 18px rgba(0,0,0,0.6);
+}
+
+/* MIST ANIMATION */
+@keyframes mistRise {
+    0% { transform: translateY(100%); }
+    100% { transform: translateY(-50%); }
 }
 
 /* HERO TEXT */
@@ -69,14 +76,12 @@ header h1 {
     text-transform: uppercase;
     font-weight: 700;
     line-height: 1.1;
-    text-shadow: 0 5px 18px rgba(0,0,0,0.6);
 }
 header p {
     font-size: 1.5em;
     max-width: 800px;
     margin: 20px auto;
     opacity: 0.92;
-    text-shadow: 0 3px 12px rgba(0,0,0,0.55);
 }
 
 /* CTA BUTTON */
@@ -306,4 +311,3 @@ footer {
 
 </body>
 </html>
-
