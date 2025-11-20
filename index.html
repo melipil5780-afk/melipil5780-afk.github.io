@@ -1,270 +1,103 @@
-HTML<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OKclarity - Vetted Mental Health Professionals for the Jewish Community</title>
+    <title>Returning Home | Men’s Intensive Growth Weekend</title>
+    <meta name="description" content="A life-changing weekend retreat for Jewish men ready to break through, heal shadows, and return home to their true power. Breathwork • Shadow Work • Experiential Processes • Brotherhood.">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f8fafc;
-            color: #333;
-        }
-        header {
-            background-color: #1a365d; /* Deep blue for trust and depth */
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(26,54,93,0.8), rgba(26,54,93,1));
-            z-index: 1;
-        }
-        header > * {
-            position: relative;
-            z-index: 2;
-        }
-        header h1 {
-            font-family: 'Arial Black', sans-serif;
-            font-size: 3em;
-            margin: 0;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-        header p {
-            font-size: 1.2em;
-            margin: 10px 0;
-        }
-        .cta-button {
-            display: inline-block;
-            background-color: #dd6b20; /* Energetic orange */
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #f6ad55; /* Gold accent on hover */
-        }
-        nav {
-            background-color: #2d3748;
-            padding: 15px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
-        nav a {
-            color: white;
-            margin: 0 20px;
-            text-decoration: none;
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.9em;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #dd6b20;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            background-color: white;
-            border-radius: 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        h2 {
-            color: #1a365d;
-            font-family: 'Arial Black', sans-serif;
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 40px 0;
-            text-align: center;
-        }
-        .stat {
-            background: linear-gradient(to bottom, #1a365d, #2d3748);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .stat h3 {
-            font-size: 2em;
-            margin: 0;
-            color: #f6ad55;
-        }
-        .testimonial {
-            background: #f8fafc;
-            padding: 20px;
-            border-left: 5px solid #dd6b20;
-            margin: 20px 0;
-            font-style: italic;
-        }
-        footer {
-            background-color: #1a365d;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            width: 100%;
-        }
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        .contact-form input, .contact-form textarea {
-            margin-bottom: 15px;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-        .contact-form button {
-            background-color: #dd6b20;
-            color: white;
-            padding: 15px;
-            border: none;
-            cursor: pointer;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .contact-form button:hover {
-            background-color: #f6ad55;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            background: #f8fafc;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 5px;
-            position: relative;
-        }
-        ul li::before {
-            content: '✓';
-            color: #dd6b20;
-            font-weight: bold;
-            font-size: 1.2em;
-            margin-right: 10px;
-        }
-        @media (max-width: 768px) {
-            header h1 { font-size: 2em; }
-            nav a { display: block; margin: 10px 0; }
-        }
+        body{font-family:Arial,sans-serif;margin:0;background:#0f172a;color:#fff;line-height:1.6}
+        header{background:linear-gradient(rgba(15,23,42,0.9),rgba(15,23,42,0.95)),url('https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=2568&auto=format&fit=crop') center/cover no-repeat;color:white;padding:120px 20px;text-align:center}
+        header h1{font-size:4em;margin:0;text-transform:uppercase;letter-spacing:4px;font-weight:900}
+        header p{font-size:1.5em;margin:20px 0}
+        .cta{background:#ea580c;color:white;padding:20px 50px;font-size:1.4em;border:none;border-radius:8px;cursor:pointer;font-weight:bold;transition:.3s;box-shadow:0 10px 30px rgba(234,88,12,0.4)}
+        .cta:hover{background:#f97316;transform:translateY(-3px)}
+        nav{background:#1e293b;padding:15px;position:sticky;top:0;z-index:100}
+        nav a{color:#fff;margin:0 20px;text-decoration:none;font-weight:bold;text-transform:uppercase;font-size:0.9em}
+        nav a:hover{color:#ea580c}
+        section{padding:80px 20px;max-width:1100px;margin:auto;text-align:center}
+        h2{font-size:3em;color:#ea580c;margin-bottom:30px;text-transform:uppercase}
+        .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin:50px 0}
+        .feature{background:#1e293b;padding:30px;border-radius:12px;border-left:6px solid #ea580c}
+        .feature h3{font-size:1.8em;margin-top:0;color:#f97316}
+        .testimonial{background:#1e293b;padding:30px;border-radius:12px;margin:30px 0;font-style:italic;font-size:1.2em;position:relative}
+        .testimonial::before{content:"“";font-size:6em;position:absolute;top:-20px;left:20px;color:#ea580c;opacity:0.3}
+        footer{background:#0f172a;padding:40px;color:#94a3b8}
+        .countdown{font-size:2em;margin:40px 0;color:#f97316}
+        @media(max-width:768px){header h1{font-size:2.5em}header{padding:80px 20px}}
     </style>
 </head>
 <body>
+
     <header>
-        <h1>OKclarity</h1>
-        <p>Unlock Clarity: Vetted Mental Health & Wellness Pros for the Jewish Community</p>
-        <p>Find Your Perfect Fit – Therapists, Coaches, Nutritionists Who Get Your Values & Vibe</p>
-        <a href="#directory" class="cta-button">Browse Directory Now</a>
+        <h1>Returning Home</h1>
+        <p>A Powerful Weekend Retreat for Jewish Men Ready to Break Open, Heal Deeply, and Step Into Their True Strength</p>
+        <p>Breathwork • Shadow Work • Experiential Processes • Sacred Brotherhood</p>
+        <button class="cta" onclick="document.getElementById('register').scrollIntoView()">Reserve Your Spot Now → Limited to 20 Men</button>
     </header>
+
     <nav>
         <a href="#about">About</a>
-        <a href="#services">How It Works</a>
-        <a href="#approach">Why OKclarity</a>
-        <a href="#testimonials">Stories</a>
-        <a href="#contact">Connect</a>
+        <a href="#what">What You'll Experience</a>
+        <a href="#why">Why This Weekend</a>
+        <a href="#stories">Men's Stories</a>
+        <a href="#register">Register</a>
     </nav>
+
     <section id="about">
-        <h2>Live Better with Clarity</h2>
-        <p>OKclarity is the revolutionary online platform for the Jewish community. We make it simple to connect with vetted therapists, psychologists, counselors, coaches, nutritionists, and wellness pros who truly understand your world. No more overwhelming searches – just seamless matches based on your needs, values, and vibe.</p>
-        <p>Founded to break barriers in Jewish mental health, we've helped thousands find support for anxiety, relationships, career struggles, and more. All pros are interviewed, credential-verified, and committed to ongoing growth.</p>
+        <h2>Return Home to Who You Were Born to Be</h2>
+        <p><strong>Returning Home</strong> is an intensive 3-day Shabbaton-style retreat created exclusively for Jewish men who are done playing small and are ready to face their shadows, release old pain, and reconnect with their fire.</p>
+        <p>Inspired by the transformative depth of Call of the Shofar and Ahdama — yet completely unique — this weekend combines ancient Jewish wisdom with cutting-edge emotional tools.</p>
+        <div class="countdown">Next Retreat: February 13–15, 2026  •  Catskills, NY  •  Only 20 spots</div>
     </section>
-    <section id="services" class="stats-grid">
-        <h2>Our Impact</h2>
-        <div class="stats-grid">
-            <div class="stat">
-                <h3>1,000+</h3>
-                <p>Vetted Professionals</p>
+
+    <section id="what" style="background:#1e293b">
+        <h2>What You'll Experience</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Deep Breathwork</h3>
+                <p>Guided conscious breathing to release stored trauma and access higher states of awareness.</p>
             </div>
-            <div class="stat">
-                <h3>10,000+</h3>
-                <p>Connections Made</p>
+            <div class="feature">
+                <h3>Shadow Work Processes</h3>
+                <p>Safe, powerful group and one-on-one exercises to meet, own, and integrate the parts you've disowned.</p>
             </div>
-            <div class="stat">
-                <h3>100%</h3>
-                <p>Cultural Sensitivity</p>
+            <div class="feature">
+                <h3>Experiential Activities</h3>
+                <p>Blindfold work, carpet work, movement, voice release, and sacred circle sharing — all in a contained, supportive container.</p>
             </div>
-            <div class="stat">
-                <h3>5-Star</h3>
-                <p>Average Rating</p>
+            <div class="feature">
+                <h3>Torah & Brotherhood</h3>
+                <p>Shabbat together, niggunim, real talk, zero judgment — reconnecting to yourself, to Hashem, and to other men.</p>
             </div>
         </div>
-        <h2>How It Works</h2>
-        <ul>
-            <li>Browse by specialty: Anxiety, depression, relationships, eating disorders, and more.</li>
-            <li>Filter for your vibe: Orthodox, Reform, secular – find who aligns with your values.</li>
-            <li>Connect anonymously: Message pros directly, book sessions seamlessly.</li>
-            <li>Grow with community: Access forums, resources, and ongoing support.</li>
-        </ul>
-        <p>Free to browse. Sessions start at $100. Many pros accept insurance like Anthem, BlueCross, Medicaid.</p>
     </section>
-    <section id="approach">
-        <h2>Why Choose OKclarity?</h2>
-        <p>We're more than a directory – we're your partner in transformation. Like Tony Robbins empowers peak performance, we empower emotional breakthroughs with compassion, energy, and results-driven tools. Our exploratory approach uncovers patterns, processes emotions, and honors your unique journey.</p>
-        <ul>
-            <li><strong>Verified Excellence:</strong> Strict vetting ensures compassionate, courageous pros.</li>
-            <li><strong>Cultural Fit:</strong> Tailored for Jewish life – from Borough Park to beyond.</li>
-            <li><strong>Holistic Growth:</strong> Therapy, coaching, nutrition – all in one empowering hub.</li>
-        </ul>
-        <p>"The clarity you seek is already within. We just help you listen." – Fay Brezel, Founder</p>
-    </section>
-    <section id="testimonials">
-        <h2>Real Stories of Transformation</h2>
+
+    <section id="why">
+        <h2>Why Men Are Saying This Changed Everything</h2>
         <div class="testimonial">
-            <p>"OKclarity changed my life. I found a therapist who gets my frum world and helped me through burnout. Seamless and supportive!"</p>
-            <cite>– Rachel L., Brooklyn</cite>
+            “I walked in carrying 20 years of anger I didn’t even know was there. By Motzei Shabbat I was crying in the arms of brothers and finally felt free.”<br><strong>— Moshe, 38, Monsey</strong>
         </div>
         <div class="testimonial">
-            <p>"As a coach, being listed here brought clients who value my approach. The platform's energy is infectious!"</p>
-            <cite>– Avi S., Nutritionist</cite>
+            “The breathwork and shadow processes cracked me open in a way no therapy ever did. I left a different man.”<br><strong>— Dovid, 29, Brooklyn</strong>
         </div>
         <div class="testimonial">
-            <p>"Finally, a directory that feels like home. Matched me with a pro for anxiety in days – no judgment, just clarity."</p>
-            <cite>– Miriam K., NYC</cite>
+            “This weekend gave me tools I use every single day. I’m calmer, stronger, and finally proud of who I am.”<br><strong>— Yosef, 45, Lakewood</strong>
         </div>
     </section>
-    <section id="contact">
-        <h2>Ready to Start?</h2>
-        <p>Join thousands transforming their lives. Browse anonymously or reach out for support.</p>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Tell us about your needs (e.g., anxiety support, career coaching)" rows="5" required></textarea>
-            <button type="submit">Get Matched Today</button>
-        </form>
-        <p style="text-align: center; margin-top: 20px;"><a href="#directory" class="cta-button">Or Browse Directory</a></p>
+
+    <section id="register" style="background:#1e293b">
+        <h2>Returning Home • February 13–15, 2026</h2>
+        <p>Private retreat center • All meals included • Glatt kosher & Shabbat observant</p>
+        <p><strong>Early-bird investment: $1,250</strong> (goes to $1,650 after Jan 1)</p>
+        <button class="cta" style="font-size:1.8em;padding:25px 60px">Secure My Spot – Only 20 Men Accepted</button>
+        <p style="margin-top:30px;font-size:1.1em">Payment plans & limited scholarships available<br>Contact: returninghome5786@gmail.com • (929) 377-8866</p>
     </section>
+
     <footer>
-        <p>&copy; 2025 OKclarity. All rights reserved. | <a href="#" style="color: #f6ad55;">Privacy Policy</a> | <a href="#" style="color: #f6ad55;">Terms of Service</a></p>
+        <p>&copy; 2025–2026 Returning Home Men’s Retreat • All Rights Reserved<br>
+        A project dedicated to real emotional & spiritual growth for Jewish men</p>
     </footer>
+
 </body>
 </html>
