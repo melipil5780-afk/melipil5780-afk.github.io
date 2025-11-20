@@ -1,105 +1,108 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Returning Home | Men’s Intensive Growth Weekend</title>
-    <meta name="description" content="A life-changing weekend retreat for Jewish men ready to break through, heal shadows, and return home to their true power. Breathwork • Shadow Work • Experiential Processes • Brotherhood.">
-    <style>
-        body{font-family:Arial,sans-serif;margin:0;background:#0f172a;color:#fff;line-height:1.6}
-        header{background:linear-gradient(rgba(15,23,42,0.9),rgba(15,23,42,0.95)),url('https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=2568&auto=format&fit=crop') center/cover no-repeat;color:white;padding:120px 20px;text-align:center}
-        header h1{font-size:4em;margin:0;text-transform:uppercase;letter-spacing:4px;font-weight:900}
-        header p{font-size:1.5em;margin:20px 0}
-        .cta{background:#ea580c;color:white;padding:20px 50px;font-size:1.4em;border:none;border-radius:8px;cursor:pointer;font-weight:bold;transition:.3s;box-shadow:0 10px 30px rgba(234,88,12,0.4)}
-        .cta:hover{background:#f97316;transform:translateY(-3px)}
-        nav{background:#1e293b;padding:15px;position:sticky;top:0;z-index:100}
-        nav a{color:#fff;margin:0 20px;text-decoration:none;font-weight:bold;text-transform:uppercase;font-size:0.9em}
-        nav a:hover{color:#ea580c}
-        section{padding:80px 20px;max-width:1100px;margin:auto;text-align:center}
-        h2{font-size:3em;color:#ea580c;margin-bottom:30px;text-transform:uppercase}
-        .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin:50px 0}
-        .feature{background:#1e293b;padding:30px;border-radius:12px;border-left:6px solid #ea580c}
-        .feature h3{font-size:1.8em;margin-top:0;color:#f97316}
-        .testimonial{background:#1e293b;padding:30px;border-radius:12px;margin:30px 0;font-style:italic;font-size:1.2em;position:relative}
-        .testimonial::before{content:"“";font-size:6em;position:absolute;top:-20px;left:20px;color:#ea580c;opacity:0.3}
-        footer{background:#0f172a;padding:40px;color:#94a3b8}
-        .countdown{font-size:2em;margin:40px 0;color:#f97316}
-        @media(max-width:768px){header h1{font-size:2.5em}header{padding:80px 20px}}
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Returning Home | Men’s Intensive Growth Weekend</title>
+    <meta name="description" content="A life-changing weekend retreat for Jewish men ready to break through, heal shadows, and return home to their true power. Breathwork • Shadow Work • Experiential Processes • Brotherhood.">
+    <style>
+        body{font-family:Arial,sans-serif;margin:0;background:#0f172a;color:#fff;line-height:1.6}
+        header{background:linear-gradient(rgba(15,23,42,0.9),rgba(15,23,42,0.95)),url('https://images.unsplash.com/photo-1506784365847-bbad939e9335?q=80&w=2568&auto=format&fit=crop') center/cover no-repeat;color:white;padding:120px 20px;text-align:center}
+        header h1{font-size:4em;margin:0;text-transform:uppercase;letter-spacing:4px;font-weight:900}
+        header p{font-size:1.5em;margin:20px 0}
+        .cta{background:#ea580c;color:white;padding:20px 50px;font-size:1.4em;border:none;border-radius:8px;cursor:pointer;font-weight:bold;transition:.3s;box-shadow:0 10px 30px rgba(234,88,12,0.4); text-decoration:none; display:inline-block;} /* Added text-decoration:none and display:inline-block for the <a> tag */
+        .cta:hover{background:#f97316;transform:translateY(-3px)}
+        nav{background:#1e293b;padding:15px;position:sticky;top:0;z-index:100}
+        nav a{color:#fff;margin:0 20px;text-decoration:none;font-weight:bold;text-transform:uppercase;font-size:0.9em}
+        nav a:hover{color:#ea580c}
+        section{padding:80px 20px;max-width:1100px;margin:auto;text-align:center}
+        h2{font-size:3em;color:#ea580c;margin-bottom:30px;text-transform:uppercase}
+        .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin:50px 0}
+        .feature{background:#1e293b;padding:30px;border-radius:12px;border-left:6px solid #ea580c}
+        .feature h3{font-size:1.8em;margin-top:0;color:#f97316}
+        .testimonial{background:#1e293b;padding:30px;border-radius:12px;margin:30px 0;font-style:italic;font-size:1.2em;position:relative}
+        .testimonial::before{content:"“";font-size:6em;position:absolute;top:-20px;left:20px;color:#ea580c;opacity:0.3}
+        footer{background:#0f172a;padding:40px;color:#94a3b8}
+        .countdown{font-size:2em;margin:40px 0;color:#f97316}
+        @media(max-width:768px){header h1{font-size:2.5em}header{padding:80px 20px}}
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Returning Home</h1>
-        <p>A Powerful Weekend Retreat for Jewish Men Ready to Break Open, Heal Deeply, and Step Into Their True Strength</p>
-        <p>Breathwork • Shadow Work • Experiential Processes • Sacred Brotherhood</p>
-        <button class="cta" onclick="document.getElementById('register').scrollIntoView()">Reserve Your Spot Now → Limited to 20 Men</button>
-    </header>
+    <header>
+        <h1>Returning Home</h1>
+        <p>A Powerful Weekend Retreat for Jewish Men Ready to Break Open, Heal Deeply, and Step Into Their True Strength</p>
+        <p>Breathwork • Shadow Work • Experiential Processes • Sacred Brotherhood</p>
+        
+        <a href="register.html" class="cta">Reserve Your Spot Now → Limited to 20 Men</a>
+    </header>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#what">What You'll Experience</a>
-        <a href="#why">Why This Weekend</a>
-        <a href="#stories">Men's Stories</a>
-        <a href="#register">Register</a>
-    </nav>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#what">What You'll Experience</a>
+        <a href="#why">Why This Weekend</a>
+        <a href="#stories">Men's Stories</a>
+        <a href="#register">Register</a>
+    </nav>
 
-    <section id="about">
-        <h2>Return Home to Who You Were Born to Be</h2>
-        <p><strong>Returning Home</strong> is an intensive 3-day Shabbaton-style retreat created exclusively for Jewish men who are done playing small and are ready to face their shadows, release old pain, and reconnect with their fire.</p>
-        <p>Inspired by the transformative depth of Call of the Shofar and Ahdama — yet completely unique — this weekend combines ancient Jewish wisdom with cutting-edge emotional tools.</p>
-        <div class="countdown">Next Retreat: February 13–15, 2026  •  Catskills, NY  •  Only 20 spots</div>
-    </section>
+    <section id="about">
+        <h2>Return Home to Who You Were Born to Be</h2>
+        <p><strong>Returning Home</strong> is an intensive 3-day Shabbaton-style retreat created exclusively for Jewish men who are done playing small and are ready to face their shadows, release old pain, and reconnect with their fire.</p>
+        <p>Inspired by the transformative depth of Call of the Shofar and Ahdama — yet completely unique — this weekend combines ancient Jewish wisdom with cutting-edge emotional tools.</p>
+        <div class="countdown">Next Retreat: February 13–15, 2026  •  Catskills, NY  •  Only 20 spots</div>
+    </section>
 
-    <section id="what" style="background:#1e293b">
-        <h2>What You'll Experience</h2>
-        <div class="features">
-            <div class="feature">
-                <h3>Deep Breathwork</h3>
-                <p>Guided conscious breathing to release stored trauma and access higher states of awareness.</p>
-            </div>
-            <div class="feature">
-                <h3>Shadow Work Processes</h3>
-                <p>Safe, powerful group and one-on-one exercises to meet, own, and integrate the parts you've disowned.</p>
-            </div>
-            <div class="feature">
-                <h3>Experiential Activities</h3>
-                <p>Blindfold work, carpet work, movement, voice release, and sacred circle sharing — all in a contained, supportive container.</p>
-            </div>
-            <div class="feature">
-                <h3>Torah & Brotherhood</h3>
-                <p>Shabbat together, niggunim, real talk, zero judgment — reconnecting to yourself, to Hashem, and to other men.</p>
-            </div>
-        </div>
-    </section>
+    <section id="what" style="background:#1e293b">
+        <h2>What You'll Experience</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>Deep Breathwork</h3>
+                <p>Guided conscious breathing to release stored trauma and access higher states of awareness.</p>
+            </div>
+            <div class="feature">
+                <h3>Shadow Work Processes</h3>
+                <p>Safe, powerful group and one-on-one exercises to meet, own, and integrate the parts you've disowned.</p>
+            </div>
+            <div class="feature">
+                <h3>Experiential Activities</h3>
+                <p>Blindfold work, carpet work, movement, voice release, and sacred circle sharing — all in a contained, supportive container.</p>
+            </div>
+            <div class="feature">
+                <h3>Torah & Brotherhood</h3>
+                <p>Shabbat together, niggunim, real talk, zero judgment — reconnecting to yourself, to Hashem, and to other men.</p>
+            </div>
+        </div>
+    </section>
 
-    <section id="why">
-        <h2>Why Men Are Saying This Changed Everything</h2>
-        <div class="testimonial">
-            “I walked in carrying 20 years of anger I didn’t even know was there. By Motzei Shabbat I was crying in the arms of brothers and finally felt free.”<br><strong>— Moshe, 38, Monsey</strong>
-        </div>
-        <div class="testimonial">
-            “The breathwork and shadow processes cracked me open in a way no therapy ever did. I left a different man.”<br><strong>— Dovid, 29, Brooklyn</strong>
-        </div>
-        <div class="testimonial">
-            “This weekend gave me tools I use every single day. I’m calmer, stronger, and finally proud of who I am.”<br><strong>— Yosef, 45, Lakewood</strong>
-        </div>
-    </section>
+    <section id="why">
+        <h2>Why Men Are Saying This Changed Everything</h2>
+        <div class="testimonial">
+            “I walked in carrying 20 years of anger I didn’t even know was there. By Motzei Shabbat I was crying in the arms of brothers and finally felt free.”<br><strong>— Moshe, 38, Monsey</strong>
+        </div>
+        <div class="testimonial">
+            “The breathwork and shadow processes cracked me open in a way no therapy ever did. I left a different man.”<br><strong>— Dovid, 29, Brooklyn</strong>
+        </div>
+        <div class="testimonial">
+            “This weekend gave me tools I use every single day. I’m calmer, stronger, and finally proud of who I am.”<br><strong>— Yosef, 45, Lakewood</strong>
+        </div>
+    </section>
 
-    <section id="register" style="background:#1e293b">
-        <h2>Returning Home • February 13–15, 2026</h2>
-        <p>Private retreat center • All meals included • Glatt kosher & Shabbat observant</p>
-        <p><strong>Early-bird investment: $1,250</strong> (goes to $1,650 after Jan 1)</p>
-        <a href="https://tally.so/r/YOUR-TALLY-CODE-HERE" target="_blank" class="cta" style="font-size:1.8em;padding:25px 60px">
-   Secure My Spot – Only 20 Men Accepted
-</a>
-        <p style="margin-top:30px;font-size:1.1em">Payment plans & limited scholarships available<br>Contact: returninghome5786@gmail.com • (929) 377-8866</p>
-    </section>
+    <section id="register" style="background:#1e293b">
+        <h2>Returning Home • February 13–15, 2026</h2>
+        <p>Private retreat center • All meals included • Glatt kosher & Shabbat observant</p>
+        <p><strong>Early-bird investment: $1,250</strong> (goes to $1,650 after Jan 1)</p>
+        
+                <a href="register.html" class="cta" style="font-size:1.8em;padding:25px 60px">
+            Secure My Spot – Only 20 Men Accepted
+        </a>
+        
+        <p style="margin-top:30px;font-size:1.1em">Payment plans & limited scholarships available<br>Contact: returninghome5786@gmail.com • (929) 377-8866</p>
+    </section>
 
-    <footer>
-        <p>&copy; 2025–2026 Returning Home Men’s Retreat • All Rights Reserved<br>
-        A project dedicated to real emotional & spiritual growth for Jewish men</p>
-    </footer>
+    <footer>
+        <p>&copy; 2025–2026 Returning Home Men’s Retreat • All Rights Reserved<br>
+        A project dedicated to real emotional & spiritual growth for Jewish men</p>
+    </footer>
 
 </body>
 </html>
