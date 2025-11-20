@@ -5,240 +5,352 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Returning Home | Men’s Intensive Growth Weekend</title>
 <meta name="description" content="A life-changing weekend retreat for Jewish men ready to break through, heal shadows, and return home to their true power. Breathwork • Shadow Work • Experiential Processes • Brotherhood." />
-<!-- Google Fonts (Masculine + Elegant) -->
+
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 /* GLOBAL */
 body {
-margin: 0;
-background: #0f172a;
-color: #fff;
-font-family: 'Inter', sans-serif;
-line-height: 1.7;
-scroll-behavior: smooth;
+    margin: 0;
+    background: #0f172a;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    scroll-behavior: smooth;
 }
 h1, h2, h3 {
-font-family: 'Oswald', sans-serif;
-letter-spacing: 1px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
 }
-/* HERO SECTION – OPTION B INSTALLED */
+
+/* HERO SECTION */
 header {
-background: linear-gradient(
-rgba(0, 0, 0, 0.85),
-rgba(139, 0, 0, 0.95)
-),
-url('https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2600&auto=format&fit=crop')
-center/cover no-repeat;
-padding: 160px 20px;
-text-align: center;
-animation: fadeIn 1.3s ease;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(15, 15, 22, 0.88) 40%,
+            rgba(90, 20, 0, 0.80) 100%
+        ),
+        url('https://www.transparenttextures.com/patterns/dark-denim.png'),
+        url('https://images.unsplash.com/photo-1602019646305-234b0f74ef24?q=80&w=2600&auto=format&fit=crop')
+        center/cover no-repeat;
+
+    padding: 180px 20px;
+    text-align: center;
+    animation: fadeIn 1.3s ease;
+    border-bottom: 3px solid rgba(249, 115, 22, 0.35);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
+
+/* HERO TEXT */
 header h1 {
-font-size: 4.5em;
-margin: 0;
-text-transform: uppercase;
-font-weight: 700;
-line-height: 1.1;
+    font-size: 4.5em;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.1;
+    text-shadow: 0 5px 18px rgba(0,0,0,0.6);
 }
 header p {
-font-size: 1.5em;
-max-width: 800px;
-margin: 20px auto;
-opacity: 0.92;
+    font-size: 1.5em;
+    max-width: 800px;
+    margin: 20px auto;
+    opacity: 0.92;
+    text-shadow: 0 3px 12px rgba(0,0,0,0.55);
 }
+
 /* CTA BUTTON */
 .cta {
-background: linear-gradient(90deg, #ea580c, #f97316);
-color: white;
-padding: 18px 55px;
-font-size: 1.4em;
-border-radius: 10px;
-text-decoration: none;
-display: inline-block;
-font-weight: 700;
-text-transform: uppercase;
-letter-spacing: 1px;
-margin-top: 25px;
-box-shadow: 0 15px 30px rgba(234, 88, 12, 0.45);
-transition: 0.3s;
+    background: linear-gradient(90deg, #ea580c, #f97316);
+    color: white;
+    padding: 18px 55px;
+    font-size: 1.4em;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 25px;
+    box-shadow: 0 15px 30px rgba(234, 88, 12, 0.45);
+    transition: 0.3s;
 }
 .cta:hover {
-transform: translateY(-4px);
-box-shadow: 0 20px 35px rgba(249, 115, 22, 0.6);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 35px rgba(249, 115, 22, 0.6);
 }
+
 /* NAVIGATION */
 nav {
-background: rgba(15, 23, 42, 0.95);
-padding: 15px;
-position: sticky;
-top: 0;
-z-index: 1000;
-backdrop-filter: blur(12px);
-border-bottom: 1px solid rgba(255,255,255,0.05);
+    background: rgba(15, 23, 42, 0.95);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 nav a {
-color: #e2e8f0;
-margin: 0 22px;
-text-decoration: none;
-font-weight: 600;
-font-size: 0.95em;
-letter-spacing: 1px;
-transition: color .25s;
+    color: #e2e8f0;
+    margin: 0 22px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    letter-spacing: 1px;
+    transition: color .25s;
 }
 nav a:hover {
-color: #f97316;
+    color: #f97316;
 }
+
 /* SECTIONS */
 section {
-padding: 90px 20px;
-max-width: 1150px;
-margin: auto;
-text-align: center;
+    padding: 90px 20px;
+    max-width: 1150px;
+    margin: auto;
+    text-align: center;
 }
 h2 {
-font-size: 3.3em;
-color: #f97316;
-text-transform: uppercase;
-margin-bottom: 20px;
-font-weight: 700;
+    font-size: 3.3em;
+    color: #f97316;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 p {
-font-size: 1.2em;
+    font-size: 1.2em;
 }
+
 /* FEATURES GRID */
 .features {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-gap: 40px;
-margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
 }
 .feature {
-background: #1e293b;
-padding: 35px;
-border-radius: 14px;
-border-top: 5px solid #f97316;
-transition: 0.3s;
+    background: #1e293b;
+    padding: 35px;
+    border-radius: 14px;
+    border-top: 5px solid #f97316;
+    transition: 0.3s;
 }
 .feature:hover {
-transform: translateY(-6px);
-box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 .feature h3 {
-font-size: 1.9em;
-margin: 10px 0;
-color: #f97316;
+    font-size: 1.9em;
+    margin: 10px 0;
+    color: #f97316;
 }
+
 /* TESTIMONIALS */
 .testimonial {
-background: #1e293b;
-padding: 40px;
-border-radius: 14px;
-margin: 40px 0;
-font-size: 1.3em;
-font-style: italic;
-position: relative;
-line-height: 1.8;
-border-left: 6px solid #f97316;
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 14px;
+    margin: 40px 0;
+    font-size: 1.3em;
+    font-style: italic;
+    position: relative;
+    line-height: 1.8;
+    border-left: 6px solid #f97316;
 }
 .testimonial::before {
-content: "“";
-font-size: 6em;
-position: absolute;
-top: -25px;
-left: 10px;
-color: #f97316;
-opacity: 0.2;
+    content: "“";
+    font-size: 6em;
+    position: absolute;
+    top: -25px;
+    left: 10px;
+    color: #f97316;
+    opacity: 0.2;
 }
+
 /* COUNTDOWN */
 .countdown {
-font-size: 2.2em;
-color: #f97316;
-margin-top: 45px;
-text-transform: uppercase;
-font-weight: 700;
+    font-size: 2.2em;
+    color: #f97316;
+    margin-top: 45px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
+
+/* ❄️ COLD PLUNGE SECTION WITH ANIMATED FOG + BREATH */
+.cold-section {
+    position: relative;
+    overflow: hidden;
+    padding: 140px 20px;
+    background:
+        linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(30,41,59,0.92)),
+        url('https://images.unsplash.com/photo-1610641818989-7482238cc5c1?q=80&w=2400&auto=format&fit=crop')
+        center/cover no-repeat;
+    border-top: 4px solid rgba(249,115,22,0.45);
+    border-bottom: 4px solid rgba(249,115,22,0.3);
+    box-shadow: inset 0 0 60px rgba(0,0,0,0.8);
+}
+
+/* ❄️ Fog Animation Layers */
+.fog {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: url('https://i.imgur.com/8IuucQZ.png');
+    background-size: cover;
+    opacity: 0.18;
+    animation: fogMove 35s linear infinite;
+}
+.fog2 {
+    animation: fogMove2 55s linear infinite;
+    opacity: 0.12;
+}
+
+@keyframes fogMove {
+    from { transform: translateX(-20%) translateY(0); }
+    to { transform: translateX(20%) translateY(-10%); }
+}
+@keyframes fogMove2 {
+    from { transform: translateX(10%) translateY(5%); }
+    to { transform: translateX(-10%) translateY(-5%); }
+}
+
+/* ⚡ Breath Condensation */
+.breath {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    width: 220px;
+    height: 220px;
+    transform: translateX(-50%);
+    background: radial-gradient(circle, rgba(255,255,255,0.25), transparent 60%);
+    opacity: 0;
+    animation: breathe 4.5s ease-in-out infinite;
+    filter: blur(25px);
+}
+
+@keyframes breathe {
+    0% { opacity: 0; transform: translateX(-50%) scale(0.6); }
+    40% { opacity: 0.45; transform: translateX(-50%) scale(1); }
+    100% { opacity: 0; transform: translateX(-50%) scale(0.6); }
+}
+
 /* FOOTER */
 footer {
-background: #0b1120;
-padding: 45px;
-text-align: center;
-color: #94a3b8;
-font-size: 0.95em;
-margin-top: 60px;
-border-top: 1px solid rgba(255,255,255,0.05);
+    background: #0b1120;
+    padding: 45px;
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.95em;
+    margin-top: 60px;
+    border-top: 1px solid rgba(255,255,255,0.05);
 }
+
 /* ANIMATIONS */
 @keyframes fadeIn {
-from { opacity: 0; transform: translateY(25px); }
-to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
 }
+
+/* MOBILE */
 @media(max-width: 768px) {
-header h1 { font-size: 2.8em; }
-header p { font-size: 1.2em; }
+    header h1 { font-size: 2.8em; }
+    header p { font-size: 1.2em; }
 }
 </style>
 </head>
+
 <body>
+
 <header>
-<h1>Returning Home</h1>
-<p>A Powerful Weekend Retreat for Jewish Men Ready to Break Open, Heal Deeply, and Step Into Their True Strength</p>
-<p>Breathwork • Shadow Work • Experiential Processes • Sacred Brotherhood</p>
-<a href="register.html" class="cta">Reserve Your Spot Now → Limited to 20 Men</a>
+    <h1>Returning Home</h1>
+    <p>A Powerful Weekend Retreat for Jewish Men Ready to Break Open, Heal Deeply, and Step Into Their True Strength</p>
+    <p>Breathwork • Shadow Work • Experiential Processes • Sacred Brotherhood</p>
+    <a href="register.html" class="cta">Reserve Your Spot Now → Limited to 20 Men</a>
 </header>
+
 <nav>
-<a href="#about">About</a>
-<a href="#what">Experience</a>
-<a href="#why">Why This Weekend</a>
-<a href="#stories">Stories</a>
-<a href="#register">Register</a>
+    <a href="#about">About</a>
+    <a href="#what">Experience</a>
+    <a href="#coldplunge">Cold Plunge</a>
+    <a href="#why">Why This Weekend</a>
+    <a href="#register">Register</a>
 </nav>
+
 <section id="about">
-<h2>Return Home to Who You Were Born to Be</h2>
-<p><strong>Returning Home</strong> is an intensive 3-day Shabbaton-style retreat created exclusively for Jewish men who are done playing small and are ready to face their shadows, release old pain, and reconnect with their fire.</p>
-<!-- REMOVED Shofar & Ahdama reference -->
-<!-- (as requested) -->
-<div class="countdown">Next Retreat: February 13–15, 2026 • Catskills, NY • Only 20 Spots</div>
+    <h2>Return Home to Who You Were Born to Be</h2>
+    <p><strong>Returning Home</strong> is an intensive 3-day Shabbaton-style retreat created exclusively for Jewish men who are done playing small and are ready to face their shadows, release old pain, and reconnect with their fire.</p>
+    <div class="countdown">Next Retreat: February 13–15, 2026 • Catskills, NY • Only 20 Spots</div>
 </section>
+
 <section id="what" style="background:#131c2f;">
-<h2>What You'll Experience</h2>
-<div class="features">
-<div class="feature">
-<h3>Deep Breathwork</h3>
-<p>Guided conscious breathing to release stored trauma and access higher states of awareness.</p>
-</div>
-<div class="feature">
-<h3>Shadow Work Processes</h3>
-<p>Safe, powerful group and one-on-one exercises to meet, own, and integrate the parts you've disowned.</p>
-</div>
-<div class="feature">
-<h3>Experiential Activities</h3>
-<p>Blindfold work, carpet work, movement, voice release, and sacred circle sharing in a supportive container.</p>
-</div>
-<div class="feature">
-<h3>Torah & Brotherhood</h3>
-<p>Shabbat together, niggunim, real talk, zero judgment — reconnecting to yourself, to Hashem, and to other men.</p>
-</div>
-</div>
+    <h2>What You'll Experience</h2>
+    <div class="features">
+        <div class="feature">
+            <h3>Deep Breathwork</h3>
+            <p>Guided conscious breathing to release stored trauma and access higher states of awareness.</p>
+        </div>
+        <div class="feature">
+            <h3>Shadow Work Processes</h3>
+            <p>Safe, powerful group and one-on-one exercises to meet, own, and integrate the parts you've disowned.</p>
+        </div>
+        <div class="feature">
+            <h3>Experiential Activities</h3>
+            <p>Blindfold work, carpet work, movement, voice release, and sacred circle sharing in a supportive container.</p>
+        </div>
+        <div class="feature">
+            <h3>Torah & Brotherhood</h3>
+            <p>Shabbat together, niggunim, real talk, zero judgment — reconnecting to yourself, to Hashem, and to other men.</p>
+        </div>
+    </div>
 </section>
+
+<!-- ❄️ CINEMATIC COLD PLUNGE SECTION -->
+<section id="coldplunge" class="cold-section">
+    <div class="fog"></div>
+    <div class="fog fog2"></div>
+    <div class="breath"></div>
+
+    <h2 style="text-shadow: 0 6px 20px rgba(0,0,0,0.8);">Cold Plunge Immersion</h2>
+    <p style="max-width: 850px; margin: auto; font-size: 1.3em; line-height: 1.8; text-shadow: 0 4px 12px rgba(0,0,0,0.7);">
+        Step into the ice. Slow your breath. Meet the part of you that rises under pressure.
+        Our guided cold plunge experience trains resilience, deep nervous system regulation, and the ability to stay calm and powerful in the face of discomfort.
+    </p>
+</section>
+
 <section id="why">
-<h2>Why Men Are Saying This Changed Everything</h2>
-<div class="testimonial">
-“I walked in carrying 20 years of anger I didn’t even know was there. By Motzei Shabbat I was crying in the arms of brothers and finally felt free.”<br><strong>— Moshe, 38, Monsey</strong>
-</div>
-<div class="testimonial">
-“The breathwork and shadow processes cracked me open in a way no therapy ever did. I left a different man.”<br><strong>— Dovid, 29, Brooklyn</strong>
-</div>
-<div class="testimonial">
-“This weekend gave me tools I use every single day. I’m calmer, stronger, and finally proud of who I am.”<br><strong>— Yosef, 45, Lakewood</strong>
-</div>
+    <h2>Why Men Are Saying This Changed Everything</h2>
+    <div class="testimonial">
+        “I walked in carrying 20 years of anger I didn’t even know was there. By Motzei Shabbat I was crying in the arms of brothers and finally felt free.”<br><strong>— Moshe, 38, Monsey</strong>
+    </div>
+    <div class="testimonial">
+        “The breathwork and shadow processes cracked me open in a way no therapy ever did. I left a different man.”<br><strong>— Dovid, 29, Brooklyn</strong>
+    </div>
+    <div class="testimonial">
+        “This weekend gave me tools I use every single day. I’m calmer, stronger, and finally proud of who I am.”<br><strong>— Yosef, 45, Lakewood</strong>
+    </div>
 </section>
+
 <section id="register" style="background:#131c2f;">
-<h2>Returning Home • February 13–15, 2026</h2>
-<p>Private retreat center • All meals included • Glatt kosher & Shabbat observant</p>
-<p><strong style="font-size:1.3em">Early-Bird Investment: $1,250</strong> (goes to $1,650 after Jan 1)</p>
-<a href="register.html" class="cta" style="font-size:1.8em;padding:25px 65px;">
-Secure My Spot – Only 20 Men Accepted
-</a>
-<p style="margin-top:35px;font-size:1.1em;">
-Payment plans & limited scholarships available<br>
-Contact: returninghome5786@gmail
+    <h2>Returning Home • February 13–15, 2026</h2>
+    <p>Private retreat center • All meals included • Glatt kosher & Shabbat observant</p>
+    <p><strong style="font-size:1.3em">Early-Bird Investment: $1,250</strong> (goes to $1,650 after Jan 1)</p>
+    <a href="register.html" class="cta" style="font-size:1.8em;padding:25px 65px;">
+        Secure My Spot – Only 20 Men Accepted
+    </a>
+    <p style="margin-top:35px;font-size:1.1em;">
+        Payment plans & limited scholarships available<br>
+        Contact: returninghome5786@gmail.com
+    </p>
+</section>
+
+<footer>
+    © 2025 Returning Home Retreat. All Rights Reserved.
+</footer>
+
+</body>
+</html>
+
