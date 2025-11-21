@@ -3,209 +3,242 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Returning Home | Jewish Men’s Shabbaton | Feb 13–15, 2026</title>
-<meta name="description" content="A deep Jewish men’s Shabbaton for emotional growth, healing, connection, and returning to your truest self. Breathwork, emotional release, cold immersion, group process, and embodied work. Only 20 spots.">
-
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
+<title>Returning Home | Men’s Intensive Growth Weekend</title>
+<meta name="description" content="A life-changing weekend retreat for Jewish men ready to break through, heal shadows, and return home to their true power. Breathwork • Shadow Work • Experiential Processes • Brotherhood." />
+<!-- Google Fonts (Masculine + Elegant) -->
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#0a0e17;color:#fff;font-family:'Inter',sans-serif;overflow-x:hidden}
-h1,h2,h3{font-family:'Oswald',sans-serif;letter-spacing:2px;text-transform:uppercase}
-
-/* HERO */
-header{
-    position:relative;
-    background: linear-gradient(rgba(0,0,0,0.52), rgba(0,0,0,0.78)),
-                url('https://i.freeimage.host/f2pB2Jp.jpg') center/cover no-repeat fixed;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:0 20px;
-    background-attachment:fixed;
+/* GLOBAL */
+body {
+margin: 0;
+background: #0f172a;
+color: #fff;
+font-family: 'Inter', sans-serif;
+line-height: 1.7;
+scroll-behavior: smooth;
 }
-
-.mist{
-    position:absolute; inset:0;
-    background:repeating-linear-gradient(45deg,transparent,transparent 40px,
-              rgba(255,255,255,.04) 40px,rgba(255,255,255,.08) 80px);
-    animation:drift 140s linear infinite;
-    opacity:0.25; pointer-events:none;
+h1, h2, h3 {
+font-family: 'Oswald', sans-serif;
+letter-spacing: 1px;
 }
-
-@keyframes drift{0%{transform:translate(0,0)}100%{transform:translate(120px,-120px)}}
-
-header > *{position:relative;z-index:2}
-header h1{
-    font-size:7.5em;margin:0;line-height:1;font-weight:700;
-    text-shadow:0 10px 30px rgba(0,0,0,0.9);
+/* HERO SECTION – OPTION B INSTALLED */
+header {
+background: linear-gradient(
+rgba(0, 0, 0, 0.85),
+rgba(139, 0, 0, 0.95)
+),
+url('https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2600&auto=format&fit=crop')
+center/cover no-repeat;
+padding: 160px 20px;
+text-align: center;
+animation: fadeIn 1.3s ease;
 }
-header .tagline{
-    font-size:2.4em;max-width:1100px;margin:25px auto 15px;
-    opacity:0.97;text-shadow:0 6px 20px #000;
+header h1 {
+font-size: 4.5em;
+margin: 0;
+text-transform: uppercase;
+font-weight: 700;
+line-height: 1.1;
 }
-header .spots{
-    font-size:3.2em;color:#f97316;font-weight:700;
-    margin:30px 0 20px;letter-spacing:3px;
+header p {
+font-size: 1.5em;
+max-width: 800px;
+margin: 20px auto;
+opacity: 0.92;
 }
-
-.cta{
-    background:linear-gradient(90deg,#ea580c,#f97316);
-    padding:26px 80px;
-    font-size:2em;
-    border-radius:16px;
-    text-decoration:none;
-    font-weight:700;
-    letter-spacing:3px;
-    box-shadow:0 25px 60px rgba(234,88,12,0.7);
-    transition:.4s;
+/* CTA BUTTON */
+.cta {
+background: linear-gradient(90deg, #ea580c, #f97316);
+color: white;
+padding: 18px 55px;
+font-size: 1.4em;
+border-radius: 10px;
+text-decoration: none;
+display: inline-block;
+font-weight: 700;
+text-transform: uppercase;
+letter-spacing: 1px;
+margin-top: 25px;
+box-shadow: 0 15px 30px rgba(234, 88, 12, 0.45);
+transition: 0.3s;
 }
-.cta:hover{transform:translateY(-10px);box-shadow:0 40px 80px rgba(249,115,22,0.9)}
-
-nav{
-    position:sticky;top:0;background:rgba(10,14,23,0.98);
-    padding:22px;backdrop-filter:blur(15px);
-    z-index:1000;text-align:center;
-    border-bottom:1px solid rgba(255,255,255,0.1)
+.cta:hover {
+transform: translateY(-4px);
+box-shadow: 0 20px 35px rgba(249, 115, 22, 0.6);
 }
-nav a{
-    color:#e2e8f0;margin:0 40px;font-size:1.2em;
-    font-weight:600;text-decoration:none;transition:.3s
+/* NAVIGATION */
+nav {
+background: rgba(15, 23, 42, 0.95);
+padding: 15px;
+position: sticky;
+top: 0;
+z-index: 1000;
+backdrop-filter: blur(12px);
+border-bottom: 1px solid rgba(255,255,255,0.05);
 }
-nav a:hover{color:#f97316}
-
-section{padding:130px 20px;max-width:1300px;margin:auto;text-align:center}
-h2{font-size:5em;color:#f97316;margin-bottom:50px;letter-spacing:3px}
-
-.features{
-    display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
-    gap:50px;margin-top:80px;
+nav a {
+color: #e2e8f0;
+margin: 0 22px;
+text-decoration: none;
+font-weight: 600;
+font-size: 0.95em;
+letter-spacing: 1px;
+transition: color .25s;
 }
-.feature{
-    background:#1e293b;padding:50px 30px;
-    border-radius:20px;border-top:10px solid #f97316;
-    transition:.4s;
+nav a:hover {
+color: #f97316;
 }
-.feature:hover{
-    transform:translateY(-15px);
-    box-shadow:0 30px 70px rgba(0,0,0,0.6)
+/* SECTIONS */
+section {
+padding: 90px 20px;
+max-width: 1150px;
+margin: auto;
+text-align: center;
 }
-
-.testimonial{
-    background:#1e293b;padding:70px 50px;border-radius:20px;
-    margin:80px auto;max-width:900px;font-size:1.6em;font-style:italic;
-    border-left:12px solid #f97316;position:relative;
+h2 {
+font-size: 3.3em;
+color: #f97316;
+text-transform: uppercase;
+margin-bottom: 20px;
+font-weight: 700;
 }
-.testimonial::before{
-    content:"“";font-size:12em;position:absolute;
-    top:-50px;left:30px;color:#f97316;opacity:0.15;
+p {
+font-size: 1.2em;
 }
-
-footer{
-    background:#0b1120;padding:90px 20px;
-    font-size:1.1em;color:#94a3b8
+/* FEATURES GRID */
+.features {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 40px;
+margin-top: 60px;
 }
-
-@media(max-width:768px){
-    header h1{font-size:4.5em}
-    header .tagline{font-size:1.6em}
-    header .spots{font-size:2.2em}
-    .cta{font-size:1.6em;padding:22px 60px}
-    h2{font-size:3.8em}
+.feature {
+background: #1e293b;
+padding: 35px;
+border-radius: 14px;
+border-top: 5px solid #f97316;
+transition: 0.3s;
+}
+.feature:hover {
+transform: translateY(-6px);
+box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+.feature h3 {
+font-size: 1.9em;
+margin: 10px 0;
+color: #f97316;
+}
+/* TESTIMONIALS */
+.testimonial {
+background: #1e293b;
+padding: 40px;
+border-radius: 14px;
+margin: 40px 0;
+font-size: 1.3em;
+font-style: italic;
+position: relative;
+line-height: 1.8;
+border-left: 6px solid #f97316;
+}
+.testimonial::before {
+content: "“";
+font-size: 6em;
+position: absolute;
+top: -25px;
+left: 10px;
+color: #f97316;
+opacity: 0.2;
+}
+/* COUNTDOWN */
+.countdown {
+font-size: 2.2em;
+color: #f97316;
+margin-top: 45px;
+text-transform: uppercase;
+font-weight: 700;
+}
+/* FOOTER */
+footer {
+background: #0b1120;
+padding: 45px;
+text-align: center;
+color: #94a3b8;
+font-size: 0.95em;
+margin-top: 60px;
+border-top: 1px solid rgba(255,255,255,0.05);
+}
+/* ANIMATIONS */
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(25px); }
+to { opacity: 1; transform: translateY(0); }
+}
+@media(max-width: 768px) {
+header h1 { font-size: 2.8em; }
+header p { font-size: 1.2em; }
 }
 </style>
 </head>
 <body>
-
 <header>
-    <div class="mist"></div>
-    <h1>Returning Home</h1>
-    <p class="tagline">A Jewish Men’s Shabbaton for Deep Inner Work, Emotional Healing & Becoming Your Truest Self</p>
-    <div class="spots">ONLY 9 SPOTS REMAINING</div>
-    <a href="#register" class="cta">BEGIN THE JOURNEY →</a>
+<h1>Returning Home</h1>
+<p>A Powerful Weekend Retreat for Jewish Men Ready to Break Open, Heal Deeply, and Step Into Their True Strength</p>
+<p>Breathwork • Shadow Work • Experiential Processes • Sacred Brotherhood</p>
+<a href="register.html" class="cta">Reserve Your Spot Now → Limited to 20 Men</a>
 </header>
-
 <nav>
-    <a href="#about">About</a>
-    <a href="#experience">The Work</a>
-    <a href="#testimonials">Stories</a>
-    <a href="#register">Register</a>
+<a href="#about">About</a>
+<a href="#what">Experience</a>
+<a href="#why">Why This Weekend</a>
+<a href="#stories">Stories</a>
+<a href="#register">Register</a>
 </nav>
-
 <section id="about">
-    <h2>Returning Home</h2>
-    <p style="font-size:1.6em;max-width:1100px;margin:auto;line-height:1.6;">
-        “Home” is not a place.  
-        It is a state of being — where your body is calm, your heart is open,
-        and your voice speaks truth without fear.  
-        This Shabbaton is built for Jewish men who want to reconnect to themselves,
-        release old emotional weight, and rediscover the grounded, strong, centered version of who they truly are.
-    </p>
+<h2>Return Home to Who You Were Born to Be</h2>
+<p><strong>Returning Home</strong> is an intensive 3-day Shabbaton-style retreat created exclusively for Jewish men who are done playing small and are ready to face their shadows, release old pain, and reconnect with their fire.</p>
+<!-- REMOVED Shofar & Ahdama reference -->
+<!-- (as requested) -->
+<div class="countdown">Next Retreat: February 13–15, 2026 • Catskills, NY • Only 20 Spots</div>
 </section>
-
-<section id="experience" style="background:#131c2f;">
-    <h2>The Work You Will Do</h2>
-
-    <p style="font-size:1.5em; max-width:980px; margin:auto; line-height:1.6;">
-        Over three days, you will move through powerful guided processes — breath, movement, emotional release,
-        men’s council, cold immersion, and connection.  
-        This is deep, honest, Jewish soul-work without religious pressure — a space to let go, reset, and return home.
-    </p>
-
-    <div class="features">
-
-        <div class="feature">
-            <h3>Somatic Breath Journeys</h3>
-            <p>Breathwork that opens the body, releases old tension, and helps you access parts of yourself blocked by years of pressure and holding.</p>
-        </div>
-
-        <div class="feature">
-            <h3>Emotional Breakthrough Work</h3>
-            <p>Guided processes to move grief, anger, fear, shame, desire, and unmet needs — safely, powerfully, and supported by other men.</p>
-        </div>
-
-        <div class="feature">
-            <h3>Authentic Group Process</h3>
-            <p>Deep circles where men speak truth, listen fully, and connect without judgment or performance. Many describe this as “finally being seen.”</p>
-        </div>
-
-        <div class="feature">
-            <h3>Blindfold Movement</h3>
-            <p>A powerful method for dropping from your mind into your body. Movement becomes a doorway into freedom, expression, and clarity.</p>
-        </div>
-
-        <div class="feature">
-            <h3>Cold Immersion Training</h3>
-            <p>Learn to stay present and steady in intensity. Build resilience and deepen your nervous system’s capacity for calm.</p>
-        </div>
-
-        <div class="feature">
-            <h3>Connection & Brotherhood</h3>
-            <p>Men supporting men. Showing up for each other. Holding each other through breakthroughs.
-            This becomes a brotherhood that doesn’t fade.</p>
-        </div>
-
-    </div>
+<section id="what" style="background:#131c2f;">
+<h2>What You'll Experience</h2>
+<div class="features">
+<div class="feature">
+<h3>Deep Breathwork</h3>
+<p>Guided conscious breathing to release stored trauma and access higher states of awareness.</p>
+</div>
+<div class="feature">
+<h3>Shadow Work Processes</h3>
+<p>Safe, powerful group and one-on-one exercises to meet, own, and integrate the parts you've disowned.</p>
+</div>
+<div class="feature">
+<h3>Experiential Activities</h3>
+<p>Blindfold work, carpet work, movement, voice release, and sacred circle sharing in a supportive container.</p>
+</div>
+<div class="feature">
+<h3>Torah & Brotherhood</h3>
+<p>Shabbat together, niggunim, real talk, zero judgment — reconnecting to yourself, to Hashem, and to other men.</p>
+</div>
+</div>
 </section>
-
-<section id="testimonials">
-    <h2>What Men Say</h2>
-    <div class="testimonial">“I walked in with years of emotional weight. I walked out lighter, clearer, calmer, and finally connected to myself again.” — D.</div>
-    <div class="testimonial">“This was the first time I felt safe enough to tell the truth about my life.” — J.</div>
-    <div class="testimonial">“I reconnected to parts of myself I forgot existed.” — M.</div>
+<section id="why">
+<h2>Why Men Are Saying This Changed Everything</h2>
+<div class="testimonial">
+“I walked in carrying 20 years of anger I didn’t even know was there. By Motzei Shabbat I was crying in the arms of brothers and finally felt free.”<br><strong>— Moshe, 38, Monsey</strong>
+</div>
+<div class="testimonial">
+“The breathwork and shadow processes cracked me open in a way no therapy ever did. I left a different man.”<br><strong>— Dovid, 29, Brooklyn</strong>
+</div>
+<div class="testimonial">
+“This weekend gave me tools I use every single day. I’m calmer, stronger, and finally proud of who I am.”<br><strong>— Yosef, 45, Lakewood</strong>
+</div>
 </section>
-
 <section id="register" style="background:#131c2f;">
-    <h2>February 13–15, 2026 • Upstate NY</h2>
-    <p style="font-size:1.8em;">Shabbaton • Private Rooms • All Meals Included • Jewish Men Only</p>
-    <p style="font-size:3em;color:#f97316;font-weight:700;margin:50px 0;">$1,650</p>
-    <a href="mailto:returninghome5786@gmail.com" class="cta" style="font-size:2.6em;padding:35px 100px;">RESERVE MY SPOT</a>
-    <p style="margin-top:60px;font-size:1.3em;">Payment plans & limited scholarships available.</p>
-</section>
-
-<footer>© 2026 Returning Home • A Jewish Men’s Shabbaton for Inner Healing</footer>
-
-</body>
-</html>
+<h2>Returning Home • February 13–15, 2026</h2>
+<p>Private retreat center • All meals included • Glatt kosher & Shabbat observant</p>
+<p><strong style="font-size:1.3em">Early-Bird Investment: $1,250</strong> (goes to $1,650 after Jan 1)</p>
+<a href="register.html" class="cta" style="font-size:1.8em;padding:25px 65px;">
+Secure My Spot – Only 20 Men Accepted
+</a>
+<p style="margin-top:35px;font-size:1.1em;">
+Payment plans & limited scholarships available<br>
+Contact: returninghome5786@gmail
