@@ -4,99 +4,207 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Returning Home | Feb 13-15, 2026 | Jewish Men's Retreat</title>
-<meta name="description" content="The most intense weekend of your life. 3 days of breathwork, shadow work, ice plunges, and sacred brotherhood. Only 20 Jewish men. Spots are going fast." />
+<meta name="description" content="A transformational 3-day immersive retreat for Jewish men. Breathwork, shadow work, emotional healing, brotherhood, and returning to your divine strength. Only 20 spots.">
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-body{margin:0;background:#0a0e17;color:#fff;font-family:'Inter',sans-serif;overflow-x:hidden}
-h1,h2,h3{font-family:'Oswald',sans-serif;letter-spacing:2px;text-transform:uppercase}
+/* GLOBAL -------------------------------------------------------------- */
+body {
+    margin: 0;
+    background: #0a0e17;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
-/* HERO – YOUR BROTHERHOOD CIRCLE PHOTO (PERFECTED) */
-header{
-    position:relative;
+/* HERO -------------------------------------------------------------- */
+header {
+    position: relative;
+    min-height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.52), rgba(0,0,0,0.78)),
-                url('https://i.freeimage.host/f2pB2Jp.jpg') center/cover no-repeat fixed;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:0 20px;
-    background-attachment:fixed;
+                url('https://i.freeimage.host/f2pB2Jp.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
 }
 
-/* Cinematic moving mist */
-.mist{ position:absolute; inset:0; background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.04) 40px,rgba(255,255,255,.08) 80px); animation:drift 140s linear infinite; opacity:0.25; pointer-events:none }
-@keyframes drift{0%{transform:translate(0,0)}100%{transform:translate(120px,-120px)}}
-
-header > *{position:relative;z-index:2}
-header h1{font-size:7.5em;margin:0;line-height:1;font-weight:700;text-shadow:0 10px 30px rgba(0,0,0,0.9);}
-header .tagline{font-size:2.4em;max-width:1100px;margin:25px auto 15px;opacity:0.97;text-shadow:0 6px 20px #000}
-header .spots{font-size:3.2em;color:#f97316;font-weight:700;margin:30px 0 20px;letter-spacing:3px}
-.cta{
-    background:linear-gradient(90deg,#ea580c,#f97316);
-    padding:26px 80px;
-    font-size:2em;
-    border-radius:16px;
-    text-decoration:none;
-    font-weight:700;
-    letter-spacing:3px;
-    box-shadow:0 25px 60px rgba(234,88,12,0.7);
-    transition:.4s;
+/* Cinematic Mist */
+.mist {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(255,255,255,.04) 40px,
+        rgba(255,255,255,.08) 80px
+    );
+    animation: drift 140s linear infinite;
+    opacity: 0.25;
+    pointer-events: none;
 }
-.cta:hover{transform:translateY(-10px);box-shadow:0 40px 80px rgba(249,115,22,0.9)}
-
-nav{position:sticky;top:0;background:rgba(10,14,23,0.98);padding:22px;backdrop-filter:blur(15px);z-index:1000;text-align:center;border-bottom:1px solid rgba(255,255,255,0.1)}
-nav a{color:#e2e8f0;margin:0 40px;font-size:1.2em;font-weight:600;text-decoration:none;transition:.3s}
-nav a:hover{color:#f97316}
-
-section{padding:130px 20px;max-width:1300px;margin:auto;text-align:center}
-h2{font-size:5em;color:#f97316;margin-bottom:50px;letter-spacing:3px}
-
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:50px;margin-top:80px}
-.feature{
-    background:#1e293b;
-    padding:50px 30px;
-    border-radius:20px;
-    border-top:10px solid #f97316;
-    transition:.4s;
+@keyframes drift {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(120px,-120px); }
 }
-.feature:hover{transform:translateY(-15px);box-shadow:0 30px 70px rgba(0,0,0,0.6)}
 
-.testimonial{
-    background:#1e293b;
-    padding:70px 50px;
-    border-radius:20px;
-    margin:80px auto;
-    max-width:900px;
-    font-size:1.6em;
-    font-style:italic;
-    border-left:12px solid #f97316;
-    position:relative;
+header > * { position: relative; z-index: 2; }
+header h1 {
+    font-size: 7em;
+    margin: 0;
+    line-height: 1;
+    font-weight: 700;
+    text-shadow: 0 12px 40px rgba(0,0,0,0.9);
 }
-.testimonial::before{content:"“";font-size:12em;position:absolute;top:-50px;left:30px;color:#f97316;opacity:0.15}
+header .tagline {
+    font-size: 2.3em;
+    max-width: 1100px;
+    margin: 25px auto 0;
+    opacity: 0.96;
+    text-shadow: 0 6px 20px #000;
+}
+header .spots {
+    margin-top: 30px;
+    font-size: 3em;
+    font-weight: 700;
+    color: #f97316;
+    letter-spacing: 3px;
+}
 
-footer{background:#0b1120;padding:90px 20px;font-size:1.1em;color:#94a3b8}
+/* CTA Button */
+.cta {
+    display: inline-block;
+    background: linear-gradient(90deg,#ea580c,#f97316);
+    padding: 26px 80px;
+    margin-top: 40px;
+    font-size: 2em;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 3px;
+    box-shadow: 0 25px 60px rgba(234,88,12,0.7);
+    transition: .4s;
+}
+.cta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 40px 80px rgba(249,115,22,0.9);
+}
 
-@media(max-width:768px){
-    header h1{font-size:4.5em}
-    header .tagline{font-size:1.6em}
-    header .spots{font-size:2.2em}
-    .cta{font-size:1.6em;padding:22px 60px}
-    h2{font-size:3.8em}
+/* NAV -------------------------------------------------------------- */
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(10,14,23,0.95);
+    padding: 22px;
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+nav a {
+    color: #e2e8f0;
+    margin: 0 40px;
+    font-size: 1.2em;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .3s;
+}
+nav a:hover { color: #f97316; }
+
+/* SECTIONS -------------------------------------------------------------- */
+section {
+    padding: 130px 20px;
+    max-width: 1300px;
+    margin: auto;
+    text-align: center;
+}
+h2 {
+    font-size: 5em;
+    color: #f97316;
+    margin-bottom: 50px;
+}
+
+/* FEATURES GRID */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 50px;
+    margin-top: 80px;
+}
+.feature {
+    background: #1e293b;
+    padding: 50px 30px;
+    border-radius: 20px;
+    border-top: 10px solid #f97316;
+    transition: .4s;
+}
+.feature:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.6);
+}
+
+/* TESTIMONIALS */
+.testimonial {
+    background: #1e293b;
+    padding: 70px 50px;
+    border-radius: 20px;
+    margin: 80px auto;
+    max-width: 900px;
+    font-size: 1.6em;
+    font-style: italic;
+    border-left: 12px solid #f97316;
+    position: relative;
+}
+.testimonial::before {
+    content: "“";
+    font-size: 12em;
+    position: absolute;
+    top: -50px;
+    left: 30px;
+    color: #f97316;
+    opacity: 0.15;
+}
+
+/* FOOTER */
+footer {
+    background: #0b1120;
+    padding: 90px 20px;
+    font-size: 1.1em;
+    color: #94a3b8;
+    text-align: center;
+}
+
+/* RESPONSIVE -------------------------------------------------------------- */
+@media (max-width: 768px) {
+    header h1 { font-size: 4.5em; }
+    header .tagline { font-size: 1.6em; }
+    header .spots { font-size: 2.2em; }
+    .cta { font-size: 1.6em; padding: 22px 60px; }
+    h2 { font-size: 3.8em; }
 }
 </style>
 </head>
+
 <body>
 
 <header>
     <div class="mist"></div>
     <h1>Returning Home</h1>
-    <p class="tagline">The Most Intense Weekend of Your Life<br>3 Days to Break Open, Heal Deeply, and Reclaim Your Fire</p>
+    <p class="tagline">The Most Intense Weekend of Your Life<br>3 Days to Break Open, Heal Deeply & Reclaim Your Fire</p>
     <div class="spots">ONLY 9 SPOTS REMAINING</div>
-    <a href="#register" class="cta">CLAIM YOUR SPOT NOW →</a>
+
+    <!-- FIXED: Takes user to next page -->
+    <a href="email-phone.html" class="cta">CLAIM YOUR SPOT NOW →</a>
 </header>
 
 <nav>
@@ -108,34 +216,40 @@ footer{background:#0b1120;padding:90px 20px;font-size:1.1em;color:#94a3b8}
 
 <section id="about">
     <h2>This Is Your Moment</h2>
-    <p style="font-size:1.6em;max-width:1000px;margin:auto;">February 13–15, 2026 • Catskills, NY<br>20 Jewish men. No distractions. Just raw truth, deep work, and unbreakable brotherhood.</p>
+    <p style="font-size:1.6em;max-width:1000px;margin:auto;">
+        February 13–15, 2026 • Catskills, NY<br>
+        20 Jewish men. No distractions. Raw truth. Deep work. Unbreakable brotherhood.
+    </p>
 </section>
 
 <section id="experience" style="background:#131c2f;">
     <h2>What You Will Go Through</h2>
     <div class="features">
-        <div class="feature"><h3>Deep Breathwork Journeys</h3><p>Release decades of stored pain and access altered states</p></div>
-        <div class="feature"><h3>Intensive Shadow Work</h3><p>Face anger, shame, and fear head-on — and transform it into power</p></div>
-        <div class="feature"><h3>Ice Plunge Immersion</h3><p>Master your nervous system in freezing water</p></div>
-        <div class="feature"><h3>Blindfold & Emotional Release</h3><p>Raw circle processes that crack men open</p></div>
-        <div class="feature"><h3>Sacred Shabbat & Niggunim</h3><p>Reconnect with Hashem and your brothers on the deepest level</p></div>
-        <div class="feature"><h3>Lifelong Brotherhood</h3><p>Leave with 19 brothers who will have your back forever</p></div>
+        <div class="feature"><h3>Deep Breathwork Journeys</h3><p>Release decades of stored pain</p></div>
+        <div class="feature"><h3>Intensive Shadow Work</h3><p>Transform anger, shame & fear</p></div>
+        <div class="feature"><h3>Ice Plunge Immersion</h3><p>Master your nervous system</p></div>
+        <div class="feature"><h3>Blindfold Release</h3><p>Raw emotional breakthroughs</p></div>
+        <div class="feature"><h3>Sacred Shabbat</h3><p>Reconnect to Hashem</p></div>
+        <div class="feature"><h3>Lifelong Brotherhood</h3><p>Your new tribe of 19 brothers</p></div>
     </div>
 </section>
 
 <section id="testimonials">
     <h2>Brothers Who Came Home</h2>
-    <div class="testimonial">“I carried 25 years of rage. This weekend I cried like a child in the arms of men I met 48 hours earlier. I’m free.” — Aharon, 41</div>
-    <div class="testimonial">“The most powerful experience of my life. Period.” — Shlomo, 36</div>
+    <div class="testimonial">“I carried 25 years of rage... This weekend I cried like a child. I'm free.” — Aharon, 41</div>
+    <div class="testimonial">“The most powerful experience of my life.” — Shlomo, 36</div>
     <div class="testimonial">“I finally feel proud to be a Jewish man again.” — Eli, 39</div>
 </section>
 
 <section id="register" style="background:#131c2f;">
     <h2>February 13–15, 2026 • Catskills</h2>
-    <p style="font-size:1.8em;">Glatt kosher • Shabbat observant • Private accommodations • All meals included</p>
+    <p style="font-size:1.8em;">Glatt kosher • Shabbat observant • Private rooms • All meals included</p>
     <p style="font-size:3em;color:#f97316;font-weight:700;margin:50px 0;">Investment: $1,650</p>
-    <a href="mailto:returninghome5786@gmail.com" class="cta" style="font-size:2.6em;padding:35px 100px;">SECURE MY SPOT – ONLY 9 LEFT</a>
-    <p style="margin-top:60px;font-size:1.3em;">Payment plans & limited scholarships available → returninghome5786@gmail.com</p>
+
+    <!-- Same CTA → directs to email/phone page -->
+    <a href="email-phone.html" class="cta" style="font-size:2.6em;padding:35px 100px;">
+        SECURE MY SPOT – ONLY 9 LEFT
+    </a>
 </section>
 
 <footer>© 2026 Returning Home • This is your call. Answer it.</footer>
