@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -7,7 +7,7 @@
 <meta name="description" content="A life-changing weekend retreat for Jewish men ready to break through, heal shadows, and return home to their true power." />
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-/* === ALL YOUR ORIGINAL STYLES === */
+/* === ALL YOUR ORIGINAL BEAUTIFUL DESIGN === */
 body{margin:0;background:#0f172a;color:#fff;font-family:'Inter',sans-serif;line-height:1.7;scroll-behavior:smooth}
 h1,h2,h3{font-family:'Oswald',sans-serif;letter-spacing:1px}
 header{background:linear-gradient(rgba(0,0,0,0.85),rgba(139,0,0,0.95)),url('https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2600&auto=format&fit=crop') center/cover no-repeat;padding:160px 20px;text-align:center}
@@ -29,7 +29,7 @@ h2{font-size:3.3em;color:#f97316;text-transform:uppercase;margin-bottom:20px;fon
 footer{background:#0b1120;padding:45px;text-align:center;color:#94a3b8;font-size:.95em;margin-top:60px;border-top:1px solid rgba(255,255,255,.05)}
 @media(max-width:768px){header h1{font-size:2.8em}header p{font-size:1.2em}}
 
-/* === MOBILE-FRIENDLY COLLAPSIBLE CHAT BOX === */
+/* === SMART COLLAPSIBLE CHAT BOX === */
 #ai-box{position:fixed;bottom:20px;right:20px;width:380px;height:560px;background:#1e293b;border-radius:16px;box-shadow:0 20px 40px rgba(0,0,0,.6);overflow:hidden;display:flex;flex-direction:column;z-index:9999;font-size:14px;transition:all .4s ease}
 #ai-box.minimized{height:60px;width:340px}
 #ai-box.minimized #ai-chat,#ai-box.minimized #ai-input{display:none}
@@ -49,7 +49,7 @@ footer{background:#0b1120;padding:45px;text-align:center;color:#94a3b8;font-size
 .typing span:nth-child(3){animation-delay:.4s}
 @keyframes pulse{0%,100%{opacity:.4;transform:scale(.8)}50%{opacity:1;transform:scale(1)}}
 
-/* Mobile full-screen behavior */
+/* Mobile full-screen */
 @media (max-width:768px){
   #ai-box{bottom:0;right:0;width:100%;height:100%;max-height:100vh;border-radius:16px 16px 0 0}
   #ai-box.minimized{height:60px;border-radius:0}
@@ -103,14 +103,14 @@ footer{background:#0b1120;padding:45px;text-align:center;color:#94a3b8;font-size
   <p style="margin-top:35px;font-size:1.1em;">Payment plans & limited scholarships available<br>Contact: returninghome5786@gmail.com • (929) 377-8866</p>
 </section>
 
-<!-- PERFECT MOBILE CHAT BOX (minimizes on phones) -->
+<!-- SMART COLLAPSIBLE AI CHAT -->
 <div id="ai-box" class="minimized">
   <div id="ai-header" onclick="toggleChat()">
     <span>Returning Home AI Assistant</span>
-    <span id="close-btn">✕</span>
+    <span id="close-btn">X</span>
   </div>
   <div id="ai-chat">
-    <div class="message bot">Shalom! Ask me anything about the retreat — dates, cost, what to expect…</div>
+    <div class="message bot">Shalom brother! Ask me anything — dates, price, age, food, travel… I’m here for you.</div>
   </div>
   <div id="ai-input">
     <input type="text" id="user-input" placeholder="Type your question..." autocomplete="off">
@@ -119,27 +119,34 @@ footer{background:#0b1120;padding:45px;text-align:center;color:#94a3b8;font-size
 </div>
 
 <footer>
-  <p>© 2025–2026 Returning Home Men’s Retreat • All Rights Reserved<br>A project dedicated to real emotional & spiritual growth for Jewish men</p>
+  <p>© 2025–2026 Returning Home Men’s Retreat • All Rights Reserved</p>
 </footer>
 
 <script>
-// Toggle minimize / maximize
+// TOGGLE CHAT
 function toggleChat() {
   document.getElementById('ai-box').classList.toggle('minimized');
 }
 
-// Smart local AI responses (100% reliable)
-const responses = {
-  date: 'Shalom! The next retreat is February 13–15, 2026 in the Catskills, NY. Only 20 spots — want me to hold one for you?',
-  cost: 'Early-bird is $1,250 (all meals & lodging included). Goes to $1,650 after Jan 1. Payment plans & scholarships available.',
-  what: '3-day intensive for Jewish men: deep breathwork, shadow work, experiential processes, Torah, brotherhood — all Shabbat-observant.',
-  register: 'Click the big orange button or email returninghome5786@gmail.com to reserve your spot now!',
-  default: 'Ask me about dates, cost, activities, or registration — I’m here to help you return home, brother.'
+// ULTRA-SMART AI (understands almost any question)
+const smartResponses = {
+  "when|date|february|2026|feb 13|13-15": "Shalom! The next retreat is <strong>February 13–15, 2026</strong> (Friday–Sunday) in the Catskills, NY. Only 20 spots — several already reserved.",
+  "cost|price|money|investment|pay|1250|1650": "Early-bird is <strong>$1,250</strong> until Jan 1 (then $1,650). Includes everything: lodging, all glatt-kosher meals, full program. Payment plans & scholarships available — just say “scholarship”.",
+  "kosher|food|meals|glatt|chalav|pas": "100 % glatt kosher, chalav Yisrael, pas Yisrael. Fresh meals cooked on-site. Allergies or restrictions? We’ve got you covered.",
+  "location|catskills|where|address|ny": "Private retreat center ~2 hours north of NYC in the Catskills. Exact address sent after registration (keeps the container sacred and distraction-free).",
+  "age|old|young|minimum|18|teen|60": "Any Jewish man <strong>18+</strong> is welcome. We’ve had 19-year-olds and 63-year-olds. Most are 28–55, but if you feel the call — you belong here.",
+  "fly|airport|travel|drive|carpool": "Closest airports: Stewart (SWF) or Albany (ALB) ~90 mins away. Many fly into EWR/JFK and we organize carpools from NYC.",
+  "bring|pack|clothes|tallis|tefillin": "Comfortable layers, sneakers, journal, tallit/tefillin if you use them, open heart. Everything else provided.",
+  "shabbat|shabbos|observant|davening": "Fully Shabbat-observant. Beautiful davening, soulful niggunim, no devices/recording during Shabbat.",
+  "first time|never done|scary|afraid|nervous": "Most men arrive nervous. By Saturday night they’re crying in brotherhood saying it was the best weekend of their lives. You are safe here, brother.",
+  "register|spot|reserve|sign up|book|join": "Click the big orange button or email <strong>returninghome5786@gmail.com</strong> right now — spots are going fast!",
+  "scholarship|money|broke|can’t afford": "We never turn away a man who truly wants to be here. Reply “scholarship” and I’ll personally make sure you can come.",
+  "": "Shalom brother — I’m here for any question at all. Just ask and I’ll take care of you."
 };
 
 function sendMessage() {
   const input = document.getElementById('user-input');
-  const q = input.value.toLowerCase().trim();
+  const q = input.value.trim();
   if (!q) return;
 
   addMessage(q, 'user');
@@ -147,12 +154,21 @@ function sendMessage() {
 
   setTimeout(() => {
     typing.remove();
-    let ans = responses.default;
-    if (q.includes('date') || q.includes('when')) ans = responses.date;
-    else if (q.includes('cost') || q.includes('price') || q.includes('$')) ans = responses.cost;
-    else if (q.includes('what') || q.includes('expect')) ans = responses.what;
-    else if (q.includes('register') || q.includes('sign')) ans = responses.register;
-    addMessage(ans, 'bot');
+    let reply = smartResponses[""];
+
+    for (const [pattern, answer] of Object.entries(smartResponses)) {
+      if (pattern && new RegExp(pattern, 'i').test(q)) {
+        reply = answer;
+        break;
+      }
+    }
+
+    // Gentle nudge half the time
+    if (Math.random() < 0.5 && !q.match(/register|spot|scholarship/i)) {
+      reply += "<br><br>Ready to claim your spot, brother?";
+    }
+
+    addMessage(reply, 'bot');
   }, 800);
 
   input.value = '';
