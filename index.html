@@ -39,28 +39,6 @@
     .nav-links{position:absolute;top:100%;left:0;width:100%;background:rgba(15,23,42,.95);flex-direction:column;padding:20px 0;display:none}
     .nav-links.active{display:flex}
   }
-  /* AI Chat Box */
-  #ai-box{position:fixed;bottom:20px;right:20px;width:380px;height:560px;background:#1e293b;border-radius:16px;box-shadow:0 20px 40px rgba(0,0,0,.6);overflow:hidden;display:flex;flex-direction:column;z-index:9999;font-size:14px;transition:all .4s ease}
-  #ai-box.minimized{height:60px;width:340px}
-  #ai-box.minimized #ai-chat,#ai-box.minimized #ai-input{display:none}
-  #ai-header{background:#f97316;padding:16px;text-align:center;font-weight:700;font-size:1.1em;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
-  #close-btn{font-size:22px;padding:0 12px;cursor:pointer}
-  #ai-chat{flex:1;padding:16px;overflow-y:auto;display:flex;flex-direction:column;gap:12px;background:#0f172a}
-  .message{padding:11px 14px;border-radius:12px;max-width:80%;line-height:1.5;word-wrap:break-word}
-  .message.user{background:#334155;align-self:flex-end}
-  .message.bot{background:#1e293b;align-self:flex-start;border:1px solid #334155}
-  #ai-input{display:flex;padding:12px;background:#131c2f;border-top:1px solid #334155}
-  #ai-input input{flex:1;padding:12px;background:#334155;border:none;border-radius:8px 0 0 8px;color:#fff;outline:none}
-  #ai-input button{padding:12px 20px;background:#f97316;border:none;border-radius:0 8px 8px 0;color:#fff;font-weight:600;cursor:pointer}
-  @media(max-width:768px){
-    #ai-box{bottom:0;right:0;width:100%;height:100%;max-height:100vh;border-radius:16px 16px 0 0}
-    #ai-box.minimized{height:60px;border-radius:0;width:100%}
-    /* THE FIX: These three lines ensure the hidden content shows when the box is open on mobile */
-    #ai-box:not(.minimized) #ai-chat,
-    #ai-box:not(.minimized) #ai-input {
-        display: flex;
-    }
-  }
 </style>
 </head>
 <body>
@@ -115,19 +93,6 @@
   <p style="margin-top:35px;font-size:1.1em;">Payment plans & limited scholarships available<br>Contact: returninghome5786@gmail.com • (929) 377-8866</p>
 </section>
 
-<div id="ai-box" class="minimized">
-  <div id="ai-header" onclick="toggleChat()">
-    <span>Retreat AI Assistant</span>
-    <span id="close-btn" onclick="event.stopPropagation(); toggleChat();">✕</span>
-  </div>
-  <div id="ai-chat">
-    <div class="message bot">Shalom brother! Ask me anything — dates, price, kosher, travel… I'm here for you.</div>
-  </div>
-  <div id="ai-input">
-    <input type="text" id="user-input" placeholder="Type your question..." autocomplete="off">
-    <button onclick="sendMessage()">Send</button>
-  </div>
-</div>
 
 <footer>
   <p>© 2025–2026 Returning Home Men's Retreat • All Rights Reserved<br>A project dedicated to real emotional & spiritual growth for Jewish men</p>
@@ -147,62 +112,9 @@ function toggleMenu() {
   document.querySelector('.nav-links').classList.toggle('active');
 }
 
-// 3. Chat toggle
-function toggleChat() {
-  document.getElementById('ai-box').classList.toggle('minimized');
-}
+// NOTE: The AI Chat Box functions (toggleChat, sendMessage, addMessage) have been removed.
 
-// 4. Smart local AI – works instantly, no API key needed
-const responses = {
-  "when|date|feb|2026|13|15": "Shalom! Next retreat: <strong>February 13–15, 2026</strong> (Fri–Sun) in the Catskills. Only 20 spots!",
-  "price|cost|money|1250|1650": "Early-bird: <strong>$1,250</strong> until Jan 1 (then $1,650). Includes everything. Scholarships available.",
-  "kosher|food|meals": "100% glatt kosher, chalav Yisrael. All dietary needs covered.",
-  "where|location|catskills": "Private center ~2 hrs north of NYC. Address after registration.",
-  "age|old|young": "Jewish men 18+. No upper limit.",
-  "travel|airport": "Carpools from NYC. Airports: Stewart (SWF) or Albany (ALB).",
-  "shabbat|observant": "Fully Shabbat-observant with beautiful davening & niggunim.",
-  "register|sign up": "Click the orange button or email returninghome5786@gmail.com",
-  "scholarship|can't afford": "We never turn away a brother. Just say “scholarship” — we’ll make it work.",
-  "nervous|scared": "Every man walks in nervous and leaves transformed. The space is safe.",
-  "": "Shalom brother — ask anything on your heart."
-};
-
-async function sendMessage() {
-  const input = document.getElementById('user-input');
-  const q = input.value.trim().toLowerCase();
-  if (!q) return;
-
-  addMessage(q, 'user');
-  const typing = addMessage('<div class="typing"><span></span><span></span><span></span></div>', 'bot');
-
-  await new Promise(r => setTimeout(r, 600 + Math.random()*400));
-
-  typing.remove();
-  let reply = responses[""];
-  for (const [key, value] of Object.entries(responses)) {
-    if (key && new RegExp(key, 'i').test(q)) {
-      reply = value;
-      break;
-    }
-  }
-  if (Math.random() < 0.35) reply += "<br><br>Ready to take the leap today, brother?";
-  addMessage(reply, 'bot');
-  input.value = '';
-}
-
-function addMessage(text, type) {
-  const chat = document.getElementById('ai-chat');
-  const div = document.createElement('div');
-  div.className = `message ${type}`;
-  div.innerHTML = text;
-  chat.appendChild(div);
-  chat.scrollTop = chat.scrollHeight;
-  return div;
-}
-
-document.getElementById('user-input').addEventListener('keypress', e => {
-  if (e.key === 'Enter') sendMessage();
-});
+// 3. Smart local AI – functions have been removed. 
 </script>
 </body>
 </html>
