@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -39,7 +39,7 @@
     .nav-links{position:absolute;top:100%;left:0;width:100%;background:rgba(15,23,42,.95);flex-direction:column;padding:20px 0;display:none}
     .nav-links.active{display:flex}
   }
-  /* AI Chat Box - Desktop Styles */
+  /* AI Chat Box - Original Desktop Styles */
   #ai-box{position:fixed;bottom:20px;right:20px;width:380px;height:560px;background:#1e293b;border-radius:16px;box-shadow:0 20px 40px rgba(0,0,0,.6);overflow:hidden;display:flex;flex-direction:column;z-index:9999;font-size:14px;transition:all .4s ease}
   #ai-box.minimized{height:60px;width:340px}
   #ai-box.minimized #ai-chat,#ai-box.minimized #ai-input{display:none}
@@ -53,30 +53,23 @@
   #ai-input input{flex:1;padding:12px;background:#334155;border:none;border-radius:8px 0 0 8px;color:#fff;outline:none}
   #ai-input button{padding:12px 20px;background:#f97316;border:none;border-radius:0 8px 8px 0;color:#fff;font-weight:600;cursor:pointer}
   
-  /* AI Chat Box - MOBILE STYLES (The Fix) */
+  /* AI Chat Box - Mobile Overrides (THE FIX IS HERE) */
   @media(max-width:768px){
-    /* Existing mobile styles */
-    header{padding:100px 15px}
-    /* ... */
-
-    /* Full-screen expanded state on mobile */
     #ai-box{
-      bottom: 0;
-      left: 0; /* Changed from 'right: 0' to start from the left edge */
-      width: 100%;
-      height: 100%;
-      max-height: 100vh;
-      border-radius: 16px 16px 0 0;
+      bottom:0;
+      right:0;
+      width:100%;
+      height:100%;
+      max-height:100vh;
+      border-radius:16px 16px 0 0
     }
-    /* Minimized state on mobile */
     #ai-box.minimized{
-      height: 60px;
-      border-radius: 0;
-      width: 100%;
-      right: 0; /* Keep it pinned to the right when minimized */
-      left: unset; /* Remove the 'left: 0' from the expanded state */
+      height:60px;
+      border-radius:0;
+      width:100%
     }
-    /* Ensure chat content is shown when the box is NOT minimized on mobile */
+    
+    /* This line ensures the chat/input fields are visible when expanded on mobile */
     #ai-box:not(.minimized) #ai-chat,
     #ai-box:not(.minimized) #ai-input {
       display: flex;
@@ -139,7 +132,7 @@
 <div id="ai-box" class="minimized">
   <div id="ai-header" onclick="toggleChat()">
     <span>Retreat AI Assistant</span>
-    <span id="close-btn" onclick="event.stopPropagation(); toggleChat();">✕</span>
+        <span id="close-btn" onclick="event.stopPropagation(); toggleChat();">✕</span>
   </div>
   <div id="ai-chat">
     <div class="message bot">Shalom brother! Ask me anything — dates, price, kosher, travel… I'm here for you.</div>
@@ -223,12 +216,6 @@ function addMessage(text, type) {
 
 document.getElementById('user-input').addEventListener('keypress', e => {
   if (e.key === 'Enter') sendMessage();
-});
-
-// Fix for closing the AI box with the X button without minimizing it twice
-document.getElementById('close-btn').addEventListener('click', e => {
-  e.stopPropagation();
-  document.getElementById('ai-box').classList.add('minimized');
 });
 </script>
 </body>
