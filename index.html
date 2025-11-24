@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -147,62 +147,77 @@ function toggleMenu() {
 function toggleChat() {
   document.getElementById('ai-box').classList.toggle('minimized');
 }
-// HYPER-SMART LOCAL AI (understands 50+ variations)
-const smartResponses = {
-  "when|date|february|2026|feb 13|13-15|next|schedule": "Shalom! The next retreat is <strong>February 13–15, 2026</strong> (Friday–Sunday, full Shabbaton) in the Catskills, NY. Only 20 spots — several already reserved. Ready to claim yours?",
- 
-  "cost|price|money|investment|pay|1250|1650|fee|how much": "Early-bird investment is <strong>$1,250</strong> until Jan 1 (then $1,650). Covers private lodging, all glatt-kosher meals, and the full program. Payment plans & scholarships? Just say “scholarship” — we make it work.",
- 
-  "kosher|food|meals|glatt|chalav|pas|diet|vegetarian|allergy": "100% glatt kosher, chalav Yisrael, pas Yisrael. Fresh, hearty meals cooked on-site. We accommodate all dietary needs — allergies, vegan, etc. Just let us know when you register.",
- 
-  "location|catskills|where|address|ny|new york|drive time": "Private, serene retreat center ~2 hours north of NYC in the Catskills. Exact address shared after registration to keep the space sacred. Hiking trails nearby for reflection.",
- 
-  "age|old|young|minimum|18|teen|20s|30s|40s|50s|60+": "Any Jewish man <strong>18+</strong> is welcome — no upper limit. We've had 19-year-olds breakthrough big and 63-year-olds find peace. Most are 28–55, but if you feel the call, you belong.",
- 
-  "fly|airport|travel|drive|carpool|get there|transport": "Closest airports: Stewart (SWF) or Albany (ALB) ~90 mins away. Fly into EWR/JFK and we'll organize carpools from NYC. Driving? Easy from Monsey/Brooklyn (~2 hrs).",
- 
-  "bring|pack|clothes|tallis|tefillin|what to wear|gear": "Pack comfortable layers, sneakers for movement, a journal, tallit/tefillin if you use them, and your open heart. We provide everything else — linens, towels, siddurim.",
- 
-  "shabbat|shabbos|observant|davening|services|friday|motzei": "Fully Shabbat-observant from candle-lighting Friday to Havdalah Sunday. Soulful davening, niggunim, no devices/recording. Real connection to Hashem and brothers.",
- 
-  "first time|never done|scary|afraid|nervous|intense|what if": "Most men walk in nervous — by Motzei Shabbat, they're in tears of freedom in each other's arms. This work is safe, guided, and transformative. You've got this, brother.",
- 
-  "register|spot|reserve|sign up|book|join|apply|how to start": "Click the big orange “Secure My Spot” button or email <strong>returninghome5786@gmail.com</strong> / call (929) 377-8866. Limited to 20 men — spots filling fast!",
- 
-  "scholarship|money tight|broke|can’t afford|financial help": "We never turn away a man with the fire to heal. Reply “scholarship details” and I'll connect you personally — limited spots, but we make it happen.",
- 
-  "jewish|jew|frum|orthodox|reform|secular|background": "Open to all Jewish men — frum, modern, secular, whatever your path. The work transcends labels; it's about reclaiming your true power.",
- 
-  "group size|how many|20 spots|small|intimate": "Intentionally small — just 20 men total. Deep work needs a tight container. That's why it changes lives.",
- 
-  "cancel|refund|commitment|what if i can't come": "Life happens — full refund if you cancel 30+ days before. After that, 50% credit to a future retreat. Your commitment means the world.",
- 
-  "": "Shalom brother — I'm listening. Ask about dates, cost, age, travel, or anything on your heart. Ready to return home?"
-};
-function sendMessage() {
+// REAL-TIME AI INTEGRATION WITH xAI GROK API
+const API_KEY = 'YOUR_XAI_API_KEY_HERE'; // Replace with your actual xAI API key from https://console.x.ai
+const API_URL = 'https://api.x.ai/v1/chat/completions';
+const MODEL = 'grok-4';
+
+let conversation = [
+  {
+    role: 'system',
+    content: `You are the Retreat AI Assistant for "Returning Home", a powerful weekend retreat for Jewish men. Be warm, encouraging, brotherly, and start responses with "Shalom brother!" when appropriate. Provide accurate information based on these details:
+- Dates: February 13–15, 2026 (Friday–Sunday, full Shabbaton) in the Catskills, NY. Only 20 spots.
+- Price: Early-bird $1,250 until Jan 1, then $1,650. Includes lodging, glatt-kosher meals, program. Payment plans & scholarships available.
+- Food: 100% glatt kosher, chalav Yisrael, pas Yisrael. Accommodate dietary needs.
+- Location: Private center ~2 hours north of NYC. Address shared after registration.
+- Age: 18+ Jewish men, no upper limit. Most 28–55.
+- Travel: Airports SWF/ALB ~90 mins, carpools from NYC.
+- What to bring: Comfortable clothes, journal, tallit/tefillin if used.
+- Shabbat: Fully observant, davening, niggunim, no devices.
+- Registration: Email returninghome5786@gmail.com or call (929) 377-8866.
+- Group size: 20 men.
+- Cancellation: Full refund 30+ days before.
+- Open to all Jewish backgrounds.
+Encourage registration and offer help. If asked about scholarships, connect them. Keep responses concise and engaging.`
+  },
+  {
+    role: 'assistant',
+    content: 'Shalom brother! Ask me anything — dates, price, age, food, travel… I\'m here for you.'
+  }
+];
+
+async function sendMessage() {
   const input = document.getElementById('user-input');
   const q = input.value.trim();
   if (!q) return;
+  
   addMessage(q, 'user');
+  conversation.push({ role: 'user', content: q });
+  
   const typing = addMessage('<div class="typing"><span></span><span></span><span></span> Reflecting…</div>', 'bot');
-  setTimeout(() => {
+  
+  try {
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${API_KEY}`
+      },
+      body: JSON.stringify({
+        messages: conversation,
+        model: MODEL,
+        stream: false
+      })
+    });
+    
+    if (!response.ok) {
+      throw new Error(`API error: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    const reply = data.choices[0].message.content;
+    
     typing.remove();
-    let reply = smartResponses[""];
-    // Smart matching
-    for (const [pattern, answer] of Object.entries(smartResponses)) {
-      if (pattern && new RegExp(pattern, 'i').test(q)) {
-        reply = answer;
-        break;
-      }
-    }
-    // Random warm nudge (50% chance)
-    if (Math.random() < 0.5 && !q.match(/register|scholarship/i)) {
-      reply += "<br><br>What's holding you back from registering today?";
-    }
     addMessage(reply, 'bot');
-  }, 800);
+    conversation.push({ role: 'assistant', content: reply });
+  } catch (error) {
+    typing.remove();
+    addMessage(`Sorry, brother – there was an error: ${error.message}. Try again?`, 'bot');
+  }
+  
   input.value = '';
 }
+
 function addMessage(text, type) {
   const chat = document.getElementById('ai-chat');
   const div = document.createElement('div');
@@ -212,6 +227,7 @@ function addMessage(text, type) {
   chat.scrollTop = chat.scrollHeight;
   return div;
 }
+
 document.getElementById('user-input').addEventListener('keypress', e => {
   if (e.key === 'Enter') sendMessage();
 });
