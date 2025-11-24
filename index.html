@@ -1,120 +1,409 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8" />
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <title>Returning Home | Men’s Intensive Growth Weekend</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-  html{scroll-behavior:smooth}
-  body{margin:0;padding:0;background:#0f172a;color:#fff;font-family:'Inter',sans-serif;line-height:1.7}
-  h1,h2,h3{font-family:'Oswald',sans-serif;letter-spacing:1px}
-  header{background:linear-gradient(rgba(0,0,0,0.85),rgba(139,0,0,0.95)),url('https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2600&auto=format&fit=crop') center/cover no-repeat;padding:160px 20px;text-align:center;cursor:pointer}
-  header h1{font-size:4.5em;margin:0;text-transform:uppercase;font-weight:700;line-height:1.1}
-  header p{font-size:1.5em;max-width:800px;margin:20px auto;opacity:.92}
-  .cta{background:linear-gradient(90deg,#ea580c,#f97316);color:white;padding:18px 55px;font-size:1.4em;border-radius:10px;text-decoration:none;display:inline-block;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-top:25px;box-shadow:0 15px 30px rgba(234,88,12,.45);transition:.3s}
-  .cta:hover{transform:translateY(-4px);box-shadow:0 20px 35px rgba(249,115,22,.6)}
-  nav{background:rgba(15,23,42,.95);padding:15px 20px;position:sticky;top:0;z-index:1000;backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center}
-  #menu-icon{display:none;font-size:1.8em;color:#fff;cursor:pointer}
-  .nav-links{display:flex;gap:30px}
-  .nav-links a{color:#e2e8f0;text-decoration:none;font-weight:600;font-size:.95em;letter-spacing:1px;transition:.25s}
-  .nav-links a:hover{color:#f97316}
-  section{padding:90px 20px;max-width:1150px;margin:auto;text-align:center}
-  h2{font-size:3.3em;color:#f97316;text-transform:uppercase;margin-bottom:20px;font-weight:700}
-  .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;margin-top:60px}
-  .feature{background:#1e293b;padding:35px;border-radius:14px;border-top:5px solid #f97316;transition:.3s}
-  .feature:hover{transform:translateY(-6px);box-shadow:0 12px 25px rgba(0,0,0,.2)}
-  .testimonial{background:#1e293b;padding:40px;border-radius:14px;margin:40px 0;font-size:1.3em;font-style:italic;position:relative;line-height:1.8;border-left:6px solid #f97316}
-  .testimonial::before{content:"“";font-size:6em;position:absolute;top:-25px;left:10px;color:#f97316;opacity:.2}
-  .countdown{font-size:2.2em;color:#f97316;margin-top:45px;text-transform:uppercase;font-weight:700}
-  footer{background:#0b1120;padding:45px;text-align:center;color:#94a3b8;font-size:.95em;margin-top:60px;border-top:1px solid rgba(255,255,255,.05)}
-  @media(max-width:768px){
-    header{padding:100px 15px}
-    header h1{font-size:2.8em}
-    header p{font-size:1.2em}
-    h2{font-size:2.5em}
-    section{padding:60px 15px}
-    .cta{padding:15px 40px;font-size:1.2em}
-    #menu-icon{display:block}
-    .nav-links{position:absolute;top:100%;left:0;width:100%;background:rgba(15,23,42,.95);flex-direction:column;padding:20px 0;display:none}
-    .nav-links.active{display:flex}
-  }
+
+  html{scroll-behavior:smooth}
+
+  body{margin:0;padding:0;background:#0f172a;color:#fff;font-family:'Inter',sans-serif;line-height:1.7}
+
+  h1,h2,h3{font-family:'Oswald',sans-serif;letter-spacing:1px}
+
+  header{background:linear-gradient(rgba(0,0,0,0.85),rgba(139,0,0,0.95)),url('https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?q=80&w=2600&auto=format&fit=crop') center/cover no-repeat;padding:160px 20px;text-align:center;cursor:pointer}
+
+  header h1{font-size:4.5em;margin:0;text-transform:uppercase;font-weight:700;line-height:1.1}
+
+  header p{font-size:1.5em;max-width:800px;margin:20px auto;opacity:.92}
+
+  .cta{background:linear-gradient(90deg,#ea580c,#f97316);color:white;padding:18px 55px;font-size:1.4em;border-radius:10px;text-decoration:none;display:inline-block;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-top:25px;box-shadow:0 15px 30px rgba(234,88,12,.45);transition:.3s}
+
+  .cta:hover{transform:translateY(-4px);box-shadow:0 20px 35px rgba(249,115,22,.6)}
+
+  nav{background:rgba(15,23,42,.95);padding:15px 20px;position:sticky;top:0;z-index:1000;backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center}
+
+  #menu-icon{display:none;font-size:1.8em;color:#fff;cursor:pointer}
+
+  .nav-links{display:flex;gap:30px}
+
+  .nav-links a{color:#e2e8f0;text-decoration:none;font-weight:600;font-size:.95em;letter-spacing:1px;transition:.25s}
+
+  .nav-links a:hover{color:#f97316}
+
+  section{padding:90px 20px;max-width:1150px;margin:auto;text-align:center}
+
+  h2{font-size:3.3em;color:#f97316;text-transform:uppercase;margin-bottom:20px;font-weight:700}
+
+  .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;margin-top:60px}
+
+  .feature{background:#1e293b;padding:35px;border-radius:14px;border-top:5px solid #f97316;transition:.3s}
+
+  .feature:hover{transform:translateY(-6px);box-shadow:0 12px 25px rgba(0,0,0,.2)}
+
+  .testimonial{background:#1e293b;padding:40px;border-radius:14px;margin:40px 0;font-size:1.3em;font-style:italic;position:relative;line-height:1.8;border-left:6px solid #f97316}
+
+  .testimonial::before{content:"“";font-size:6em;position:absolute;top:-25px;left:10px;color:#f97316;opacity:.2}
+
+  .countdown{font-size:2.2em;color:#f97316;margin-top:45px;text-transform:uppercase;font-weight:700}
+
+  footer{background:#0b1120;padding:45px;text-align:center;color:#94a3b8;font-size:.95em;margin-top:60px;border-top:1px solid rgba(255,255,255,.05)}
+
+  @media(max-width:768px){
+
+    header{padding:100px 15px}
+
+    header h1{font-size:2.8em}
+
+    header p{font-size:1.2em}
+
+    h2{font-size:2.5em}
+
+    section{padding:60px 15px}
+
+    .cta{padding:15px 40px;font-size:1.2em}
+
+    #menu-icon{display:block}
+
+    .nav-links{position:absolute;top:100%;left:0;width:100%;background:rgba(15,23,42,.95);flex-direction:column;padding:20px 0;display:none}
+
+    .nav-links.active{display:flex}
+
+  }
+
+  /* AI Chat Box */
+
+  #ai-box{position:fixed;bottom:20px;right:20px;width:380px;height:560px;background:#1e293b;border-radius:16px;box-shadow:0 20px 40px rgba(0,0,0,.6);overflow:hidden;display:flex;flex-direction:column;z-index:9999;font-size:14px;transition:all .4s ease}
+
+  #ai-box.minimized{height:60px;width:340px}
+
+  #ai-box.minimized #ai-chat,#ai-box.minimized #ai-input{display:none}
+
+  #ai-header{background:#f97316;padding:16px;text-align:center;font-weight:700;font-size:1.1em;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+
+  #close-btn{font-size:22px;padding:0 12px;cursor:pointer}
+
+  #ai-chat{flex:1;padding:16px;overflow-y:auto;display:flex;flex-direction:column;gap:12px;background:#0f172a}
+
+  .message{padding:11px 14px;border-radius:12px;max-width:80%;line-height:1.5;word-wrap:break-word}
+
+  .message.user{background:#334155;align-self:flex-end}
+
+  .message.bot{background:#1e293b;align-self:flex-start;border:1px solid #334155}
+
+  #ai-input{display:flex;padding:12px;background:#131c2f;border-top:1px solid #334155}
+
+  #ai-input input{flex:1;padding:12px;background:#334155;border:none;border-radius:8px 0 0 8px;color:#fff;outline:none}
+
+  #ai-input button{padding:12px 20px;background:#f97316;border:none;border-radius:0 8px 8px 0;color:#fff;font-weight:600;cursor:pointer}
+
+  @media(max-width:768px){
+
+    #ai-box{bottom:0;right:0;width:100%;height:100%;max-height:100vh;border-radius:16px 16px 0 0}
+
+    #ai-box.minimized{height:60px;border-radius:0;width:100%}
+
+  }
+
 </style>
+
 </head>
+
 <body>
+
+
+
+<!-- This forces every phone to open at the top -->
 
 <div id="top"></div>
 
+
+
 <header onclick="window.scrollTo({top:0,behavior:'smooth'})">
-  <h1>Returning Home</h1>
-  <p>A Powerful Weekend Retreat for Jewish Men Ready to Break Open, Heal Deeply, and Step Into Their True Strength</p>
-  <p>Breathwork • Shadow Work • Experiential Processes • Sacred Brotherhood</p>
-  <a href="register.html" class="cta">Reserve Your Spot Now → Limited to 20 Men</a>
+
+  <h1>Returning Home</h1>
+
+  <p>A Powerful Weekend Retreat for Jewish Men Ready to Break Open, Heal Deeply, and Step Into Their True Strength</p>
+
+  <p>Breathwork • Shadow Work • Experiential Processes • Sacred Brotherhood</p>
+
+  <a href="register.html" class="cta">Reserve Your Spot Now → Limited to 20 Men</a>
+
 </header>
 
+
+
 <nav>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#what">Experience</a>
-    <a href="#why">Why This Weekend</a>
-    <a href="#register">Register</a>
-  </div>
-  <div id="menu-icon" onclick="toggleMenu()">☰</div>
+
+  <div class="nav-links">
+
+    <a href="#about">About</a>
+
+    <a href="#what">Experience</a>
+
+    <a href="#why">Why This Weekend</a>
+
+    <a href="#register">Register</a>
+
+  </div>
+
+  <div id="menu-icon" onclick="toggleMenu()">☰</div>
+
 </nav>
 
+
+
 <section id="about">
-  <h2>Return Home to Who You Were Born to Be</h2>
-  <p><strong>Returning Home</strong> is an intensive 3-day Shabbaton-style retreat created exclusively for Jewish men who are done playing small and are ready to face their shadows, release old pain, and reconnect with their fire.</p>
-  <div class="countdown">Next Retreat: February 13–15, 2026 • Catskills, NY • Only 20 Spots</div>
+
+  <h2>Return Home to Who You Were Born to Be</h2>
+
+  <p><strong>Returning Home</strong> is an intensive 3-day Shabbaton-style retreat created exclusively for Jewish men who are done playing small and are ready to face their shadows, release old pain, and reconnect with their fire.</p>
+
+  <div class="countdown">Next Retreat: February 13–15, 2026 • Catskills, NY • Only 20 Spots</div>
+
 </section>
+
+
 
 <section id="what" style="background:#131c2f;">
-  <h2>What You'll Experience</h2>
-  <div class="features">
-    <div class="feature"><h3>Deep Breathwork</h3><p>Guided conscious breathing to release stored trauma and access higher states of awareness.</p></div>
-    <div class="feature"><h3>Shadow Work Processes</h3><p>Safe, powerful group and one-on-one exercises to meet, own, and integrate the parts you've disowned.</p></div>
-    <div class="feature"><h3>Experiential Activities</h3><p>Blindfold work, carpet work, movement, voice release, and sacred circle sharing in a supportive container.</p></div>
-    <div class="feature"><h3>Torah & Brotherhood</h3><p>Shabbat together, niggunim, real talk, zero judgment — reconnecting to yourself, to Hashem, and to other men.</p></div>
-  </div>
+
+  <h2>What You'll Experience</h2>
+
+  <div class="features">
+
+    <div class="feature"><h3>Deep Breathwork</h3><p>Guided conscious breathing to release stored trauma and access higher states of awareness.</p></div>
+
+    <div class="feature"><h3>Shadow Work Processes</h3><p>Safe, powerful group and one-on-one exercises to meet, own, and integrate the parts you've disowned.</p></div>
+
+    <div class="feature"><h3>Experiential Activities</h3><p>Blindfold work, carpet work, movement, voice release, and sacred circle sharing in a supportive container.</p></div>
+
+    <div class="feature"><h3>Torah & Brotherhood</h3><p>Shabbat together, niggunim, real talk, zero judgment — reconnecting to yourself, to Hashem, and to other men.</p></div>
+
+  </div>
+
 </section>
+
+
 
 <section id="why">
-  <h2>Why Men Are Saying This Changed Everything</h2>
-  <div class="testimonial">“I walked in carrying 20 years of anger I didn't even know was there. By Motzei Shabbat I was crying in the arms of brothers and finally felt free.”<br><strong>— Moshe, 38, Monsey</strong></div>
-  <div class="testimonial">“The breathwork and shadow processes cracked me open in a way no therapy ever did. I left a different man.”<br><strong>— Dovid, 29, Brooklyn</strong></div>
-  <div class="testimonial">“This weekend gave me tools I use every single day. I'm calmer, stronger, and finally proud of who I am.”<br><strong>— Yosef, 45, Lakewood</strong></div>
+
+  <h2>Why Men Are Saying This Changed Everything</h2>
+
+  <div class="testimonial">“I walked in carrying 20 years of anger I didn't even know was there. By Motzei Shabbat I was crying in the arms of brothers and finally felt free.”<br><strong>— Moshe, 38, Monsey</strong></div>
+
+  <div class="testimonial">“The breathwork and shadow processes cracked me open in a way no therapy ever did. I left a different man.”<br><strong>— Dovid, 29, Brooklyn</strong></div>
+
+  <div class="testimonial">“This weekend gave me tools I use every single day. I'm calmer, stronger, and finally proud of who I am.”<br><strong>— Yosef, 45, Lakewood</strong></div>
+
 </section>
 
+
+
 <section id="register" style="background:#131c2f;">
-  <h2>Returning Home • February 13–15, 2026</h2>
-  <p>Private retreat center • All meals included • Glatt kosher & Shabbat observant</p>
-  <p><strong style="font-size:1.3em">Early-Bird Investment: $1,250</strong> (goes to $1,650 after Jan 1)</p>
-  <a href="register.html" class="cta" style="font-size:1.8em;padding:25px 65px;">Secure My Spot – Only 20 Men Accepted</a>
-  <p style="margin-top:35px;font-size:1.1em;">Payment plans & limited scholarships available<br>Contact: returninghome5786@gmail.com • (929) 377-8866</p>
+
+  <h2>Returning Home • February 13–15, 2026</h2>
+
+  <p>Private retreat center • All meals included • Glatt kosher & Shabbat observant</p>
+
+  <p><strong style="font-size:1.3em">Early-Bird Investment: $1,250</strong> (goes to $1,650 after Jan 1)</p>
+
+  <a href="register.html" class="cta" style="font-size:1.8em;padding:25px 65px;">Secure My Spot – Only 20 Men Accepted</a>
+
+  <p style="margin-top:35px;font-size:1.1em;">Payment plans & limited scholarships available<br>Contact: returninghome5786@gmail.com • (929) 377-8866</p>
+
 </section>
+
+
+
+<!-- AI CHAT BOX -->
+
+<div id="ai-box" class="minimized">
+
+  <div id="ai-header" onclick="toggleChat()">
+
+    <span>Retreat AI Assistant</span>
+
+    <span id="close-btn">✕</span>
+
+  </div>
+
+  <div id="ai-chat">
+
+    <div class="message bot">Shalom brother! Ask me anything — dates, price, kosher, travel… I'm here for you.</div>
+
+  </div>
+
+  <div id="ai-input">
+
+    <input type="text" id="user-input" placeholder="Type your question..." autocomplete="off">
+
+    <button onclick="sendMessage()">Send</button>
+
+  </div>
+
+</div>
+
 
 
 <footer>
-  <p>© 2025–2026 Returning Home Men's Retreat • All Rights Reserved<br>A project dedicated to real emotional & spiritual growth for Jewish men</p>
+
+  <p>© 2025–2026 Returning Home Men's Retreat • All Rights Reserved<br>A project dedicated to real emotional & spiritual growth for Jewish men</p>
+
 </footer>
 
+
+
 <script>
+
 // 1. Force top on every mobile device
+
 history.scrollRestoration = "manual";
+
 window.addEventListener('load', () => {
-  window.scrollTo(0, 0);
-  setTimeout(() => window.scrollTo(0, 0), 50);
+
+  window.scrollTo(0, 0);
+
+  setTimeout(() => window.scrollTo(0, 0), 50);
+
 });
+
 window.location.href = "#top";
 
+
+
 // 2. Mobile menu
+
 function toggleMenu() {
-  document.querySelector('.nav-links').classList.toggle('active');
+
+  document.querySelector('.nav-links').classList.toggle('active');
+
 }
 
-// NOTE: The AI Chat Box functions (toggleChat, sendMessage, addMessage) have been removed.
 
-// 3. Smart local AI – functions have been removed. 
+
+// 3. Chat toggle
+
+function toggleChat() {
+
+  document.getElementById('ai-box').classList.toggle('minimized');
+
+}
+
+
+
+// 4. Smart local AI – works instantly, no API key needed
+
+const responses = {
+
+  "when|date|feb|2026|13|15": "Shalom! Next retreat: <strong>February 13–15, 2026</strong> (Fri–Sun) in the Catskills. Only 20 spots!",
+
+  "price|cost|money|1250|1650": "Early-bird: <strong>$1,250</strong> until Jan 1 (then $1,650). Includes everything. Scholarships available.",
+
+  "kosher|food|meals": "100% glatt kosher, chalav Yisrael. All dietary needs covered.",
+
+  "where|location|catskills": "Private center ~2 hrs north of NYC. Address after registration.",
+
+  "age|old|young": "Jewish men 18+. No upper limit.",
+
+  "travel|airport": "Carpools from NYC. Airports: Stewart (SWF) or Albany (ALB).",
+
+  "shabbat|observant": "Fully Shabbat-observant with beautiful davening & niggunim.",
+
+  "register|sign up": "Click the orange button or email returninghome5786@gmail.com",
+
+  "scholarship|can't afford": "We never turn away a brother. Just say “scholarship” — we’ll make it work.",
+
+  "nervous|scared": "Every man walks in nervous and leaves transformed. The space is safe.",
+
+  "": "Shalom brother — ask anything on your heart."
+
+};
+
+
+
+async function sendMessage() {
+
+  const input = document.getElementById('user-input');
+
+  const q = input.value.trim().toLowerCase();
+
+  if (!q) return;
+
+
+
+  addMessage(q, 'user');
+
+  const typing = addMessage('<div class="typing"><span></span><span></span><span></span></div>', 'bot');
+
+
+
+  await new Promise(r => setTimeout(r, 600 + Math.random()*400));
+
+
+
+  typing.remove();
+
+  let reply = responses[""];
+
+  for (const [key, value] of Object.entries(responses)) {
+
+    if (key && new RegExp(key, 'i').test(q)) {
+
+      reply = value;
+
+      break;
+
+    }
+
+  }
+
+  if (Math.random() < 0.35) reply += "<br><br>Ready to take the leap today, brother?";
+
+  addMessage(reply, 'bot');
+
+  input.value = '';
+
+}
+
+
+
+function addMessage(text, type) {
+
+  const chat = document.getElementById('ai-chat');
+
+  const div = document.createElement('div');
+
+  div.className = `message ${type}`;
+
+  div.innerHTML = text;
+
+  chat.appendChild(div);
+
+  chat.scrollTop = chat.scrollHeight;
+
+  return div;
+
+}
+
+
+
+document.getElementById('user-input').addEventListener('keypress', e => {
+
+  if (e.key === 'Enter') sendMessage();
+
+});
+
 </script>
+
 </body>
+
 </html>
