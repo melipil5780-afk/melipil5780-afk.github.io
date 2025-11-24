@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -15,7 +15,7 @@ header h1{font-size:4.5em;margin:0;text-transform:uppercase;font-weight:700;line
 header p{font-size:1.5em;max-width:800px;margin:20px auto;opacity:.92}
 .cta{background:linear-gradient(90deg,#ea580c,#f97316);color:white;padding:18px 55px;font-size:1.4em;border-radius:10px;text-decoration:none;display:inline-block;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-top:25px;box-shadow:0 15px 30px rgba(234,88,12,.45);transition:.3s}
 .cta:hover{transform:translateY(-4px);box-shadow:0 20px 35px rgba(249,115,22,.6)}
-nav{background:rgba(15,23,42,.95);padding:15px;position:sticky;top:0;z-index:1000;backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.05)}
+nav{background:rgba(15,23,42,.95);padding:15px;position:sticky;top:0;z-index:1000;backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.05);display:flex;justify-content:center;align-items:center}
 nav a{color:#e2e8f0;margin:0 22px;text-decoration:none;font-weight:600;font-size:.95em;letter-spacing:1px;transition:color .25s}
 nav a:hover{color:#f97316}
 section{padding:90px 20px;max-width:1150px;margin:auto;text-align:center}
@@ -27,8 +27,31 @@ h2{font-size:3.3em;color:#f97316;text-transform:uppercase;margin-bottom:20px;fon
 .testimonial::before{content:"“";font-size:6em;position:absolute;top:-25px;left:10px;color:#f97316;opacity:.2}
 .countdown{font-size:2.2em;color:#f97316;margin-top:45px;text-transform:uppercase;font-weight:700}
 footer{background:#0b1120;padding:45px;text-align:center;color:#94a3b8;font-size:.95em;margin-top:60px;border-top:1px solid rgba(255,255,255,.05)}
-@media(max-width:768px){header h1{font-size:2.8em}header p{font-size:1.2em}}
-
+/* === IMPROVED MOBILE STYLES === */
+@media(max-width:768px){
+  header{padding:100px 15px}
+  header h1{font-size:2.8em}
+  header p{font-size:1.2em}
+  h2{font-size:2.5em}
+  section{padding:60px 15px}
+  .cta{padding:15px 40px;font-size:1.2em}
+  .features{gap:30px}
+  .feature{padding:25px}
+  .testimonial{padding:30px;font-size:1.1em;margin:30px 0}
+  .countdown{font-size:1.8em}
+  footer{padding:30px;font-size:.9em}
+}
+/* === RESPONSIVE NAV === */
+nav{display:flex;justify-content:space-between;align-items:center;padding:15px 20px}
+#menu-icon{display:none;font-size:1.5em;color:#fff;cursor:pointer}
+.nav-links{display:flex}
+.nav-links a{margin:0 15px}
+@media(max-width:768px){
+  #menu-icon{display:block}
+  .nav-links{position:absolute;top:100%;left:0;width:100%;background:rgba(15,23,42,.95);flex-direction:column;align-items:center;display:none}
+  .nav-links.active{display:flex}
+  .nav-links a{margin:15px 0;display:block}
+}
 /* === COLLAPSIBLE CHAT BOX (MOBILE PERFECT) === */
 #ai-box{position:fixed;bottom:20px;right:20px;width:380px;height:560px;background:#1e293b;border-radius:16px;box-shadow:0 20px 40px rgba(0,0,0,.6);overflow:hidden;display:flex;flex-direction:column;z-index:9999;font-size:14px;transition:all .4s ease}
 #ai-box.minimized{height:60px;width:340px}
@@ -48,36 +71,34 @@ footer{background:#0b1120;padding:45px;text-align:center;color:#94a3b8;font-size
 .typing span:nth-child(2){animation-delay:.2s}
 .typing span:nth-child(3){animation-delay:.4s}
 @keyframes pulse{0%,100%{opacity:.4;transform:scale(.8)}50%{opacity:1;transform:scale(1)}}
-
 /* Mobile full-screen */
 @media (max-width:768px){
   #ai-box{bottom:0;right:0;width:100%;height:100%;max-height:100vh;border-radius:16px 16px 0 0}
-  #ai-box.minimized{height:60px;border-radius:0}
+  #ai-box.minimized{height:60px;border-radius:0;width:100%}
 }
 </style>
 </head>
 <body>
-
 <header>
   <h1>Returning Home</h1>
   <p>A Powerful Weekend Retreat for Jewish Men Ready to Break Open, Heal Deeply, and Step Into Their True Strength</p>
   <p>Breathwork • Shadow Work • Experiential Processes • Sacred Brotherhood</p>
   <a href="register.html" class="cta">Reserve Your Spot Now → Limited to 20 Men</a>
 </header>
-
 <nav>
-  <a href="#about">About</a>
-  <a href="#what">Experience</a>
-  <a href="#why">Why This Weekend</a>
-  <a href="#register">Register</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#what">Experience</a>
+    <a href="#why">Why This Weekend</a>
+    <a href="#register">Register</a>
+  </div>
+  <div id="menu-icon" onclick="toggleMenu()">☰</div>
 </nav>
-
 <section id="about">
   <h2>Return Home to Who You Were Born to Be</h2>
   <p><strong>Returning Home</strong> is an intensive 3-day Shabbaton-style retreat created exclusively for Jewish men who are done playing small and are ready to face their shadows, release old pain, and reconnect with their fire.</p>
   <div class="countdown">Next Retreat: February 13–15, 2026 • Catskills, NY • Only 20 Spots</div>
 </section>
-
 <section id="what" style="background:#131c2f;">
   <h2>What You'll Experience</h2>
   <div class="features">
@@ -87,14 +108,12 @@ footer{background:#0b1120;padding:45px;text-align:center;color:#94a3b8;font-size
     <div class="feature"><h3>Torah & Brotherhood</h3><p>Shabbat together, niggunim, real talk, zero judgment — reconnecting to yourself, to Hashem, and to other men.</p></div>
   </div>
 </section>
-
 <section id="why">
   <h2>Why Men Are Saying This Changed Everything</h2>
   <div class="testimonial">“I walked in carrying 20 years of anger I didn't even know was there. By Motzei Shabbat I was crying in the arms of brothers and finally felt free.”<br><strong>— Moshe, 38, Monsey</strong></div>
   <div class="testimonial">“The breathwork and shadow processes cracked me open in a way no therapy ever did. I left a different man.”<br><strong>— Dovid, 29, Brooklyn</strong></div>
   <div class="testimonial">“This weekend gave me tools I use every single day. I'm calmer, stronger, and finally proud of who I am.”<br><strong>— Yosef, 45, Lakewood</strong></div>
 </section>
-
 <section id="register" style="background:#131c2f;">
   <h2>Returning Home • February 13–15, 2026</h2>
   <p>Private retreat center • All meals included • Glatt kosher & Shabbat observant</p>
@@ -102,11 +121,10 @@ footer{background:#0b1120;padding:45px;text-align:center;color:#94a3b8;font-size
   <a href="register.html" class="cta" style="font-size:1.8em;padding:25px 65px;">Secure My Spot – Only 20 Men Accepted</a>
   <p style="margin-top:35px;font-size:1.1em;">Payment plans & limited scholarships available<br>Contact: returninghome5786@gmail.com • (929) 377-8866</p>
 </section>
-
 <!-- COLLAPSIBLE AI CHAT -->
 <div id="ai-box" class="minimized">
   <div id="ai-header" onclick="toggleChat()">
-    <span>Returning Home AI Assistant</span>
+    <span>Retreat AI Assistant</span>
     <span id="close-btn">✕</span>
   </div>
   <div id="ai-chat">
@@ -117,62 +135,59 @@ footer{background:#0b1120;padding:45px;text-align:center;color:#94a3b8;font-size
     <button onclick="sendMessage()">Send</button>
   </div>
 </div>
-
 <footer>
   <p>&copy; 2025–2026 Returning Home Men's Retreat • All Rights Reserved<br>A project dedicated to real emotional & spiritual growth for Jewish men</p>
 </footer>
-
 <script>
+// TOGGLE NAV MENU
+function toggleMenu() {
+  document.querySelector('.nav-links').classList.toggle('active');
+}
 // TOGGLE CHAT
 function toggleChat() {
   document.getElementById('ai-box').classList.toggle('minimized');
 }
-
 // HYPER-SMART LOCAL AI (understands 50+ variations)
 const smartResponses = {
   "when|date|february|2026|feb 13|13-15|next|schedule": "Shalom! The next retreat is <strong>February 13–15, 2026</strong> (Friday–Sunday, full Shabbaton) in the Catskills, NY. Only 20 spots — several already reserved. Ready to claim yours?",
-  
+ 
   "cost|price|money|investment|pay|1250|1650|fee|how much": "Early-bird investment is <strong>$1,250</strong> until Jan 1 (then $1,650). Covers private lodging, all glatt-kosher meals, and the full program. Payment plans & scholarships? Just say “scholarship” — we make it work.",
-  
+ 
   "kosher|food|meals|glatt|chalav|pas|diet|vegetarian|allergy": "100% glatt kosher, chalav Yisrael, pas Yisrael. Fresh, hearty meals cooked on-site. We accommodate all dietary needs — allergies, vegan, etc. Just let us know when you register.",
-  
+ 
   "location|catskills|where|address|ny|new york|drive time": "Private, serene retreat center ~2 hours north of NYC in the Catskills. Exact address shared after registration to keep the space sacred. Hiking trails nearby for reflection.",
-  
+ 
   "age|old|young|minimum|18|teen|20s|30s|40s|50s|60+": "Any Jewish man <strong>18+</strong> is welcome — no upper limit. We've had 19-year-olds breakthrough big and 63-year-olds find peace. Most are 28–55, but if you feel the call, you belong.",
-  
+ 
   "fly|airport|travel|drive|carpool|get there|transport": "Closest airports: Stewart (SWF) or Albany (ALB) ~90 mins away. Fly into EWR/JFK and we'll organize carpools from NYC. Driving? Easy from Monsey/Brooklyn (~2 hrs).",
-  
+ 
   "bring|pack|clothes|tallis|tefillin|what to wear|gear": "Pack comfortable layers, sneakers for movement, a journal, tallit/tefillin if you use them, and your open heart. We provide everything else — linens, towels, siddurim.",
-  
+ 
   "shabbat|shabbos|observant|davening|services|friday|motzei": "Fully Shabbat-observant from candle-lighting Friday to Havdalah Sunday. Soulful davening, niggunim, no devices/recording. Real connection to Hashem and brothers.",
-  
+ 
   "first time|never done|scary|afraid|nervous|intense|what if": "Most men walk in nervous — by Motzei Shabbat, they're in tears of freedom in each other's arms. This work is safe, guided, and transformative. You've got this, brother.",
-  
+ 
   "register|spot|reserve|sign up|book|join|apply|how to start": "Click the big orange “Secure My Spot” button or email <strong>returninghome5786@gmail.com</strong> / call (929) 377-8866. Limited to 20 men — spots filling fast!",
-  
+ 
   "scholarship|money tight|broke|can’t afford|financial help": "We never turn away a man with the fire to heal. Reply “scholarship details” and I'll connect you personally — limited spots, but we make it happen.",
-  
+ 
   "jewish|jew|frum|orthodox|reform|secular|background": "Open to all Jewish men — frum, modern, secular, whatever your path. The work transcends labels; it's about reclaiming your true power.",
-  
+ 
   "group size|how many|20 spots|small|intimate": "Intentionally small — just 20 men total. Deep work needs a tight container. That's why it changes lives.",
-  
+ 
   "cancel|refund|commitment|what if i can't come": "Life happens — full refund if you cancel 30+ days before. After that, 50% credit to a future retreat. Your commitment means the world.",
-  
+ 
   "": "Shalom brother — I'm listening. Ask about dates, cost, age, travel, or anything on your heart. Ready to return home?"
 };
-
 function sendMessage() {
   const input = document.getElementById('user-input');
   const q = input.value.trim();
   if (!q) return;
-
   addMessage(q, 'user');
   const typing = addMessage('<div class="typing"><span></span><span></span><span></span> Reflecting…</div>', 'bot');
-
   setTimeout(() => {
     typing.remove();
     let reply = smartResponses[""];
-
     // Smart matching
     for (const [pattern, answer] of Object.entries(smartResponses)) {
       if (pattern && new RegExp(pattern, 'i').test(q)) {
@@ -180,18 +195,14 @@ function sendMessage() {
         break;
       }
     }
-
     // Random warm nudge (50% chance)
     if (Math.random() < 0.5 && !q.match(/register|scholarship/i)) {
       reply += "<br><br>What's holding you back from registering today?";
     }
-
     addMessage(reply, 'bot');
   }, 800);
-
   input.value = '';
 }
-
 function addMessage(text, type) {
   const chat = document.getElementById('ai-chat');
   const div = document.createElement('div');
@@ -201,7 +212,6 @@ function addMessage(text, type) {
   chat.scrollTop = chat.scrollHeight;
   return div;
 }
-
 document.getElementById('user-input').addEventListener('keypress', e => {
   if (e.key === 'Enter') sendMessage();
 });
